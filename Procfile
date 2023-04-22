@@ -1,1 +1,1 @@
-web: gunicorn the-barn.wsgi
+web: gunicorn thebarn.wsgi
