@@ -1,3 +1,4 @@
 from django.contrib import admin
+from .models import guest_booking
 
-# Register your models here.
+admin.site.register(guest_booking)
