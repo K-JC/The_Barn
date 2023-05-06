@@ -1,8 +1,14 @@
 /*import google fonts*/
-@import url('');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     border: none;
+}
+
+body {
+    font-family: 'Playfair Display', sans-serif;
+    font-weight: 300;
+    color: #997d02;
 }
