@@ -29,6 +29,7 @@ PICK_GUESTS = (
 
 # booking model with CRUD functionality
 
+
 class guest_booking (models.Model):
     guest = models.CharField(max_length=10, choices=PICK_GUESTS)
     day = models.DateField(default=datetime.now)
@@ -37,6 +38,7 @@ class guest_booking (models.Model):
     l_name = models.CharField(max_length=100, default="")
     email = models.EmailField(max_length=100, default="")
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
-    #return a string representation of an object
+    # return a string representation of an object
+
     def __str__(self):
         return f"""Name: {self.f_name} {self.l_name} | Guest: {self.guest} | Day: {self.day} | Time: {self.time}"""
