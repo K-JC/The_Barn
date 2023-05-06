@@ -26,3 +26,13 @@ PICK_GUESTS = (
     ('7', '7'),
     ('8', '8'),
 )
+
+# booking model with CRUD functionality
+
+class guest_booking (models.Model):
+    guest = 
+    day = 
+    time =
+    f_name =
+    l_name =
+    email =
