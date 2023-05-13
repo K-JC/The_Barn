@@ -33,7 +33,7 @@ PICK_GUESTS = (
 class guest_booking (models.Model):
     guest = models.CharField(max_length=10, choices=PICK_GUESTS)
     day = models.DateField(default=datetime.now)
-    time = models.CharField(max_length=10, choices=PICK_TIME) # 10
+    time = models.CharField(max_length=10, choices=PICK_TIME)
     f_name = models.CharField(max_length=100, default="")
     l_name = models.CharField(max_length=100, default="")
     email = models.EmailField(max_length=100, default="")

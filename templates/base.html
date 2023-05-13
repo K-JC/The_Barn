@@ -22,9 +22,12 @@
 </head>
 
 <body>
-<h1>TEST</h1>    
+<h1>TEST</h1> 
+<a class="nav-link" href="{% url '' %}">Home</a>  
 
-
+{% block content %}
+<!-- Content Goes here -->
+{% endblock content %}
 
 <footer>
 <!--Social media links and contact details -->
