@@ -7,4 +7,4 @@ from .models import guest_booking
 # Restaurant home page class
 class Home (generic.ListView):
     model = guest_booking
-    template_name = 'index.html'
+    template_name = 'base.html'
