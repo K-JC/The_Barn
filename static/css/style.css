@@ -12,3 +12,10 @@ body {
     font-weight: 300;
     color: #997d02;
 }
+
+#hero-image {
+    background-image: url('../css/hero-image.jpg');
+    background-repeat: no-repeat;  
+    background-position: center;
+    width: 100%;   
+}
