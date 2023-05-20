@@ -21,19 +21,39 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="d-flex flex-column h-100">
 <!--Heading with logo and nav bar -->
-<h1>The Barn Restaurant</h1> 
+<h1>The Barn Restaurant</h1>
+
+<!--nav bar-->
+<div class="">
+
+<!--navagation home/menu/booking/login/signup/-->
+<ul>
+<li>Home</li>
+<li>Menu</li>
+<li>Book A Table</li>
+<li>Sign Up/Log in</li>
+</ul>
+</div>
 
 
+<main>
 {% block content %}
 <!-- Content Goes here-->
 {% endblock content %}
+</main>
 
 <footer>
 <!--Social media links and contact details -->
 <div> 
-    <i class="fa-brands fa-facebook"></i> 
+<p>Follow Us On:
+    <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Visit us on our Facebook page (opens in a new tab)"><i class="fa-brands fa-facebook"></i>
+    </a>
+    <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Visit us on our Instagram page (opens in a new tab)"><i class="fa-brands fa-instagram"></i> </a>
+    <a href="https://twitter.com/" target="_blank" rel="noopener" aria-label="Visit us on our Twitter page (opens in a new tab)"><i class="fa-brands fa-twitter"></i> </a>
+</p>
+<p>©The Barn Restaurant</p>
 </div>
 </footer>
 </body>

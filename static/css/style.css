@@ -1,21 +1,12 @@
 /*import google fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    border: none;
-}
-
 body {
     font-family: 'Playfair Display', sans-serif;
     font-weight: 300;
     color: #997d02;
 }
-
+/*main image across page*/
 #hero-image {
-    background-image: url('../css/hero-image.jpg');
-    background-repeat: no-repeat;  
-    background-position: center;
-    width: 100%;   
+    background-image: url('../css/images/hero-image.jpg') no-repeat 95% 50%;
 }
