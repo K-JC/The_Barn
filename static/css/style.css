@@ -29,6 +29,6 @@ footer {
 }
 
 /*fix color */
-#social-links {
-    color: white;
+.social-links {
+    text-align: center;
 }
