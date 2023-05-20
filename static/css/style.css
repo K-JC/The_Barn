@@ -33,3 +33,14 @@ footer {
     text-align: center;
     
 }
+
+.btn-signup {
+    background-color: #b99700;
+    color: white;
+}
+
+.btn-signup:hover,
+.btn-signup:active {
+    background-color: #edce43;
+    color: white;
+}
