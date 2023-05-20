@@ -3,10 +3,32 @@
 
 body {
     font-family: 'Playfair Display', sans-serif;
-    font-weight: 300;
-    color: #997d02;
+    font-weight: 200;
+    font-size: medium;
+    color:black;
 }
-/*main image across page*/
+
+#barn-logo {
+    font-family: 'Playfair Display', sans-serif;
+    font-weight: 400;
+    color: #b99700;
+}
+/*main image across page...testing these with bright color backgrounds*/
 #hero-image {
-    background-image: url('../css/images/hero-image.jpg') no-repeat 95% 50%;
+    background-image: url('../css/images/hero-image.jpg');
+}
+
+.nav-bar {
+    color: #b99700;
+    background-color: black;
+}
+
+footer {
+    color: #b99700;
+    background-color: black;
+}
+
+/*fix color */
+#social-links {
+    color: white;
 }
