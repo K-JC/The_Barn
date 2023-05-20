@@ -21,4 +21,5 @@ from django.contrib.staticfiles.storage import staticfiles_storage
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('bookingsystem.urls'), name='bookingsystem_urls'),
+    path('accounts/', include('allauth.urls')),
 ]
