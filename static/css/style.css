@@ -1,6 +1,7 @@
 /*import google fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
 
+/*body*/
 body {
     font-family: 'Playfair Display', sans-serif;
     font-weight: 200;
@@ -8,6 +9,7 @@ body {
     color:black;
 }
 
+/*the barn logo*/
 #barn-logo {
     font-family: 'Playfair Display', sans-serif;
     font-weight: 400;
@@ -18,22 +20,33 @@ body {
     background-image: url('../css/images/hero-image.jpg');
 }
 
+/*navagation bar area*/
 .nav-bar {
     color: #b99700;
     background-color: black;
 }
+/*footer area*/
 
 footer {
     color: #b99700;
     background-color: black;
 }
 
-/*fix color */
+/*Social Links*/
+
 .social-links {
     text-align: center;
-    
+}
+.social-links > a {
+    color: #b99700;
+    text-decoration: none;
 }
 
+#copyright {
+    text-align: center;
+}
+
+/*login/signup buttons*/
 .btn-signup {
     background-color: #b99700;
     color: white;
