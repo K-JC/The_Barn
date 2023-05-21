@@ -23,3 +23,4 @@ urlpatterns = [
     path('', include('bookingsystem.urls'), name='bookingsystem_urls'),
     path('accounts/', include('allauth.urls')),
 ]
+ 

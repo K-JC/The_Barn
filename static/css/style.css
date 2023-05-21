@@ -15,9 +15,16 @@ body {
     font-weight: 400;
     color: #b99700;
 }
-/*main image across page...testing these with bright color backgrounds*/
-#hero-image {
-    background-image: url('../css/images/hero-image.jpg');
+/*main image*/
+
+.hero-image {
+    background: url('https://res.cloudinary.com/dugjc92qc/image/upload/v1684575024/hero-image_mbcle9.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment:scroll;
+    min-height: 300px;
+    max-width: 100%;
 }
 
 /*navagation bar area*/
@@ -25,6 +32,12 @@ body {
     color: #b99700;
     background-color: black;
 }
+
+.btn-book {
+    background-color: #b99700;
+
+}
+
 /*footer area*/
 
 footer {
