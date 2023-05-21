@@ -25,9 +25,12 @@ body {
 .nav-bar li {
     list-style-type: none;
     text-decoration: underline;
-    text-align: center;
     word-spacing: 2px;
     letter-spacing: 1px;
+    text-align: right;
+    text-transform: uppercase;
+    padding: 10px;
+    display: inline;
 }
 
 /*main image*/
