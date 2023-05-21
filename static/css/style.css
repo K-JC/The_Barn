@@ -14,15 +14,16 @@ body {
     font-family: 'Playfair Display', sans-serif;
     font-weight: 400;
     color: #b99700;
+    font-size: x-large;
 }
 
 /*navagation bar area*/
-.nav-bar {
-    color: #b99700;
-    background-color: black; 
+nav {
+    background-color: black;
 }
-
-/*Home Menu Sign up Sign in links */
+span i {
+    color: #b99700;
+}
 
 .nav-links {
     color: #b99700;
@@ -35,20 +36,19 @@ body {
     position: relative;
     bottom: 40px;
 }
-
 .nav-options {
     display: inline;    
+    font-size: small;
 }
 
 /*main image*/
-
 .hero-image {
     background: url('https://res.cloudinary.com/dugjc92qc/image/upload/v1684575024/hero-image_mbcle9.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment:scroll;
-    min-height: 300px;
+    min-height: 250px;
     max-width: 100%;
 }
 
@@ -88,3 +88,4 @@ footer {
     background-color: #edce43;
     color: white;
 }
+
