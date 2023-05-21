@@ -15,6 +15,21 @@ body {
     font-weight: 400;
     color: #b99700;
 }
+
+/*navagation bar area*/
+.nav-bar {
+    color: #b99700;
+    background-color: black; 
+}
+
+.nav-bar li {
+    list-style-type: none;
+    text-decoration: underline;
+    text-align: center;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+}
+
 /*main image*/
 
 .hero-image {
@@ -27,15 +42,8 @@ body {
     max-width: 100%;
 }
 
-/*navagation bar area*/
-.nav-bar {
-    color: #b99700;
-    background-color: black;
-}
-
 .btn-book {
     background-color: #b99700;
-
 }
 
 /*footer area*/
