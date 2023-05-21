@@ -22,15 +22,22 @@ body {
     background-color: black; 
 }
 
-.nav-bar li {
-    list-style-type: none;
-    text-decoration: underline;
+/*Home Menu Sign up Sign in links */
+
+.nav-links {
+    color: #b99700;
     word-spacing: 2px;
     letter-spacing: 1px;
-    text-align: right;
     text-transform: uppercase;
-    padding: 10px;
-    display: inline;
+    padding: 8px;
+    list-style-type: none;
+    float: right;
+    position: relative;
+    bottom: 40px;
+}
+
+.nav-options {
+    display: inline;    
 }
 
 /*main image*/
