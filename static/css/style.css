@@ -61,6 +61,27 @@ span i {
     text-align: center;
 }
 
+.food-image {
+    background: url("https://res.cloudinary.com/dugjc92qc/image/upload/v1684860611/restaurant_squid_owd9jq.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-attachment: scroll;
+    height: 200px;
+    position: relative;
+    width: 300px;
+
+}
+
+.fish-chips {
+    background: url("https://res.cloudinary.com/dugjc92qc/image/upload/v1684867628/restaurant_fish_ndqxwa.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-attachment: scroll;
+    height: 200px;
+    position: relative;
+    width: 300px;
+}
+
 /*footer area*/
 
 footer {
