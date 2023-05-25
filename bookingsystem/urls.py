@@ -7,6 +7,10 @@ urlpatterns = [
     # home url
     path('', views.Home.as_view(), name='home'),
     # Booking url
-    path('bookingsystem/', views.MakeBooking.as_view(),
+    path('make_booking', views.MakeBooking.as_view(),
          name='make_booking'),
+    # Menu url
+    path('menu', views.Menu.as_view(), name='menu'),
 ]
+   # Edit Booking url
+# Delete Booking url

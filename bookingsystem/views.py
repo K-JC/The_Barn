@@ -34,14 +34,14 @@ class BookingEdit(generic.UpdateView):
     model = guest_booking
     template_name = 'edit_booking.html'
     fields = (['guest', 'day', 'time', 'first_name', 'last_name', 'email'])
-    success_url = 'bookingsystem/my_booking.html'
+    success_url = 'my_booking.html'
 
 
 # This class will allow for the user to delete their booking
 class BookingDelete(generic.DeleteView):
     model = guest_booking
     template_name = 'delete_booking.html'
-    success_url = 'bookingsystem/my_booking.html'
+    success_url = 'my_booking.html'
 
 # Thic class will allow the user to view their bookings
 
@@ -49,4 +49,11 @@ class BookingDelete(generic.DeleteView):
 class ViewBooking(generic.ListView):
     model = guest_booking
     template_name = 'my_booking.html'
-    success_url = 'bookingsystem/my_booking.html'
+    success_url = 'my_booking.html'
+
+# class allowing menu page to be rendered in the browser 
+
+
+class Menu(generic.DetailView):
+    def get(self, request):
+        return render(request, 'menu.html')
