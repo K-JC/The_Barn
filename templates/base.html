@@ -41,7 +41,15 @@
             <li class="nav-item active nav-options">
                 <br>
                 <br>
-                <a class="nav-links" href="">Home</a>
+                <a class="nav-links" href="{% url 'home' %}">Home</a>
+            </li>
+            {% if user.is_authenticated %}
+            <li class="nav-item">
+            <a class="nav-links" href="{% url 'account_logout' %}">Logout</a>
+            </li>
+            {% else %}
+            <li class="nav-item">
+                <a class="nav-links" href="{% url 'account_signup' %}">Sign Up</a>
             </li>
             <li class="nav-options">
                 <a class="nav-links" href="">Menu</a>
@@ -50,8 +58,9 @@
                 <a class="nav-links" href="">Book A Table</a>
             </li>
             <li class="nav-options">
-                <a class="nav-links" href="">Sign Up/Log in</a>
+                <a class="nav-links" href="{% url 'account_login' %}">Sign in</a>
             </li>
+            {% endif %}
         </ul>
     </div>
 </nav>
