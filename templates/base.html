@@ -28,7 +28,7 @@
     <!--nav bar with toggle for smaller screen sizes-->
 
     <nav class="navbar">
-        <a id="barn-logo" href="#">The Barn Restaurant</a>
+        <a id="barn-logo" href="{% url 'home' %}">The Barn Restaurant</a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse"
         data-target="#navbarSupportedContent41" aria-controls="navbarSupportedContent41" aria-expanded="false"
@@ -52,10 +52,10 @@
                 <a class="nav-links" href="{% url 'account_signup' %}">Sign Up</a>
             </li>
             <li class="nav-options">
-                <a class="nav-links" href="">Menu</a>
+                <a class="nav-links" href="">Menu</a> <!--LINK UP-->
             </li>
             <li class="nav-options">
-                <a class="nav-links" href="">Book A Table</a>
+                <a class="nav-links" href="{% url 'make_booking' %}">Book A Table</a>
             </li>
             <li class="nav-options">
                 <a class="nav-links" href="{% url 'account_login' %}">Sign in</a>

@@ -1,11 +1,24 @@
-{% extends "base.html" %}
+{% extends "base.html" %} 
 
 {% block content %}
+<!--User authorisation to make booking-->
+
 
 <!--make a booking section-->
-<div>
-    
+<section id="make-booking" class="booking-table">
+<div class="booking-container">
+    <div class="row">
+    <div class="col-md-3 mt-5 offset-md-3"></div>
+    <form method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+
+        <button id="submit-button" class="btn btn-success">Book Now</button>
+    </form>
+</div> 
 </div>
+</div>
+</section>
 
 
 {%endblock%}
