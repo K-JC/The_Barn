@@ -19,17 +19,24 @@ def get(self, request):
 
 # This class will allow the user to create their booking
 
-
+# FIX 
 class MakeBooking(generic.CreateView):
     model = guest_booking
     template_name = 'make_booking.html'
     fields = (['guest', 'day', 'time', 'f_name', 'l_name', 'email'])
 
-    def success_url(self, request):
-        return render(request, 'thankyou.html')
+    def success_url(make_booking):
+        return render('thankyou.html')
 
+    def valid_booking():
+        guest_booking = form.save(commit=false)
+        guest_booking.user = self.request.user
+        guest_booking.save()
+        return render(guest_booking)
 
 # This class will allow for the user to edit a booking
+
+
 class BookingEdit(generic.UpdateView):
     model = guest_booking
     template_name = 'edit_booking.html'
@@ -47,9 +54,9 @@ class BookingDelete(generic.DeleteView):
 
 
 class ViewBooking(generic.ListView):
-    model = guest_booking
-    template_name = 'my_booking.html'
-    success_url = 'my_booking.html'
+    def get(self, request):
+        return render(request, 'my_booking.html')
+
 
 # class allowing menu page to be rendered in the browser 
 
@@ -57,3 +64,10 @@ class ViewBooking(generic.ListView):
 class Menu(generic.DetailView):
     def get(self, request):
         return render(request, 'menu.html')
+
+# class for the thank you page to be rendered in the browser
+
+
+class Thankyou(generic.DetailView):
+    def get(self, request):
+        return render(request, 'thankyou.html')

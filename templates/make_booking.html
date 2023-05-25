@@ -9,12 +9,12 @@
     <h5>Enter Your Details Here: </h5>
 <div class="booking-container">
     <div class="row">
-    <div class="col-md-3 mt-5 offset-md-3"></div>
-    <form method="POST">
+    <div class="col-md-3 mt-5 offset-md-3">
+    <form method="POST" action="my_booking.html"> 
         {% csrf_token %}
-        {{form.as_p}}
+        {{ form.as_p }}
 
-        <button id="submit-button" class="btn btn-success" href="">Book Now</button>
+        <button id="submit-button" class="btn btn-success" href=" {% url 'thankyou' %}">Book Now</button>
     </form>
 </div> 
 </div>

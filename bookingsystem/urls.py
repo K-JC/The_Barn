@@ -11,6 +11,10 @@ urlpatterns = [
          name='make_booking'),
     # Menu url
     path('menu', views.Menu.as_view(), name='menu'),
+    # thankyou url
+    path('thankyou', views.Thankyou.as_view(), name='thankyou'),
+    # view Booking url
+    path('my_booking', views.ViewBooking.as_view(), name='my_booking'),
 ]
-   # Edit Booking url
+# Edit Booking url
 # Delete Booking url
