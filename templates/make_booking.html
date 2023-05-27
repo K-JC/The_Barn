@@ -3,30 +3,40 @@
 {% block content %}
 <!--User authorisation to make booking-->
 {% if not user.is_authenticated %}
+<section id="make-booking" class="booking-table">
 <div class="container">
   <div class="row">
       <div class="col-md-8 mt-3 offset-md-2">
 <h3>Sign up is required</h3>
-<p>Welcome to The Barn Restaurant. To book a table please sign up for an account? <a href="{% url 'account_signup' %}"> sign up here</a>. Or to sign in please <a href="{% url 'account_login' %}"> sign in here</a></p>
+<p>Welcome to The Barn Restaurant.
+To book a table please sign up for an account? <a href="{% url 'account_signup' %}"> sign up here</a>. 
+Or to sign in please <a href="{% url 'account_login' %}"> sign in here</a></p>
 </div>
-  </div>
+</div>
+</section>
+
 {% else %}
+
 {% if user.is_authenticated %}
+
 <!--make a booking section-->
 <section id="make-booking" class="booking-table">
     <h5>Enter Your Details Here: </h5>
 <div class="booking-container">
     <div class="row">
     <div class="col-md-3 mt-5 offset-md-3">
-    <form method="POST"> <!--BUG HERE FIX-->
+    <form method="POST">
         {% csrf_token %}
         {{ form.as_p }}
+
         <button id="submit-button" class="btn btn-success" href="">Book Now</button>
     </form>
 </div> 
 </div>
 </div>
 </section>
+
 {% endif %}
 {% endif %}
+
 {%endblock%}
