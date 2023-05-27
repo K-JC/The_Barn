@@ -40,7 +40,7 @@ class BookingEdit(generic.UpdateView):
     fields = (['guest', 'day', 'time', 'first_name', 'last_name', 'email'])
 
     def get(self, request):
-        return render(request, 'my_booking.html')
+        return render(request, 'edit_booking.html')
 
 
 # This class will allow for the user to delete their booking
@@ -49,7 +49,7 @@ class BookingDelete(generic.DeleteView):
     template_name = 'delete_booking.html'
 
     def get(self, request):
-        return render(request, 'index.html')
+        return render(request, 'delete_booking.html')
 
 # Thic class will allow the user to view their bookings
 

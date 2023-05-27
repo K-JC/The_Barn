@@ -12,7 +12,7 @@
     <ul>
         <form method="POST">
     
-        <p>Number of guests: {{ object.guest }}</p>
+        <li>Number of guests: {{ object.guest }}</li>
         <li>Date</li>
         <li>Time</li>
         <li>First Name</li>
@@ -21,8 +21,8 @@
     </ul>
        
 </form>
-        <button id="submit-button" class="btn btn-success">Edit Booking</button>
-        <button id="submit-button" class="btn btn-success">Delete Booking</button>
+        <a href="{% url 'edit_booking' %}" class="btn btn-success">Edit Booking</a>
+        <a href="{% url 'delete_booking' %}" class="btn btn-danger">Delete Booking</a>
 </div> 
 </div>
 </div>

@@ -11,7 +11,7 @@
     <form method="POST"> 
         {% csrf_token %}
         {{ form.as_p }}
-        <button id="submit" class="btn btn-dark" href="">Edit</button>
+    <a href="{% url 'my_booking' %}" class="btn btn-dark">Back To My Bookings</a>
     </form>
 </div> 
 </div>

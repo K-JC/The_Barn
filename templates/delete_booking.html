@@ -3,7 +3,6 @@
 {% block content %}
 
 <!--delete booking section-->
-<!--make a booking section-->
 <section id="make-booking" class="booking-table">
     <h5>Delete Your Booking Here: </h5>
 <div class="booking-container">
@@ -11,9 +10,8 @@
     <div class="col-md-3 mt-5 offset-md-3">
     <form method="POST"> 
         {% csrf_token %}
-        
-
-        <button id="submit" value="Confirm" class="btn btn-dark" href="">Delete</button>
+       
+        <button id="submit" value="Confirm" class="btn btn-danger" href="">Delete</button>
         <button id="submit-button" class="btn btn-dark" href=" {% url 'home' %}">Back</button>
     </form>
 </div> 
