@@ -55,6 +55,7 @@ class BookingDelete(generic.DeleteView):
 class ViewBooking(generic.ListView):
     model = guest_booking()
     template_name = 'my_booking.html'
+    success_url = 'my_booking'
 
     def get(self, request):
         return render(request, 'my_booking.html')
