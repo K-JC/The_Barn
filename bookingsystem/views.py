@@ -19,12 +19,12 @@ def get(self, request):
 
 # This class will allow the user to create their booking
 
-# Making Bookings WORKS on admin - Find the bug
+# Making Bookings WORKS on admin - Find the bug FIXED
 class MakeBooking(generic.CreateView):
     model = guest_booking
     template_name = 'make_booking.html'
     fields = (['guest', 'day', 'time', 'f_name', 'l_name', 'email'])
-    success_url = 'thankyou/' # bug here now
+    success_url = '/thankyou/'
     
     def bookings_made(self, request):
         return render(request, 'my_booking.html') 
