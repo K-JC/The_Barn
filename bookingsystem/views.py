@@ -33,17 +33,19 @@ class MakeBooking(generic.CreateView):
 
 # This class will allow for the user to edit a booking
 
-
+# FIX BUG
 class BookingEdit(generic.UpdateView):
     model = guest_booking
     template_name = 'edit_booking.html'
     fields = (['guest', 'day', 'time', 'first_name', 'last_name', 'email'])
+    
 
     def get(self, request):
         return render(request, 'edit_booking.html')
 
 
-# This class will allow for the user to delete their booking
+# This class will allow for the user to delete their booking 
+# FIX BUG
 class BookingDelete(generic.DeleteView):
     model = guest_booking
     template_name = 'delete_booking.html'
