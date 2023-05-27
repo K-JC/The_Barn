@@ -16,5 +16,5 @@ urlpatterns = [
     # Edit Booking url
     path('edit_booking/', views.BookingEdit.as_view(), name='edit_booking'),
     # Delete Booking url
-    path('delete_booking/', views.DeleteView.as_view(), name='delete_booking'),
+    path('delete_booking/', views.BookingDelete.as_view(), name='delete_booking'),
 ]

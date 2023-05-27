@@ -33,7 +33,7 @@ class MakeBooking(generic.CreateView):
 
 # This class will allow for the user to edit a booking
 
-# FIX THIS 
+
 class BookingEdit(generic.UpdateView):
     model = guest_booking
     template_name = 'edit_booking.html'
