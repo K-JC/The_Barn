@@ -23,7 +23,7 @@ def get(self, request):
 class MakeBooking(generic.CreateView):
     model = guest_booking
     template_name = 'make_booking.html'
-    fields = (['guest', 'day', 'time', 'f_name', 'l_name', 'email'])
+    fields = (['guest', 'day', 'time', 'first_name', 'last_name', 'email'])
     success_url = '/thankyou/'
     
     def bookings_made(self, request):
