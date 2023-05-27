@@ -9,12 +9,10 @@
       <div class="col-md-8 mt-3 offset-md-2">
 <h3>Sign up is required</h3>
 <p>Welcome to The Barn Restaurant.
-To book a table please sign up for an account? <a href="{% url 'account_signup' %}"> sign up here</a>. 
-Or to sign in please <a href="{% url 'account_login' %}"> sign in here</a></p>
+To book a table please sign in <a href="{% url 'account_login' %}"> sign in here</a></p>
 </div>
 </div>
 </section>
-
 {% else %}
 
 {% if user.is_authenticated %}
@@ -29,7 +27,7 @@ Or to sign in please <a href="{% url 'account_login' %}"> sign in here</a></p>
         {% csrf_token %}
         {{ form.as_p }}
 
-        <button id="submit-button" class="btn btn-success" href="">Book Now</button>
+        <button id="submit-button" class="btn btn-success" href="{% url 'thankyou' %}">Book Now</button>
     </form>
 </div> 
 </div>
@@ -38,5 +36,4 @@ Or to sign in please <a href="{% url 'account_login' %}"> sign in here</a></p>
 
 {% endif %}
 {% endif %}
-
 {%endblock%}
