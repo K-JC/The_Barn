@@ -1,20 +1,21 @@
 {% extends "base.html" %} 
 
-{% block content %}
+{% block content %} 
 
 <!--my booking section-->
 <section id="my-booking">
-    <h5>Your Bookings: </h5>
+    <h5>Your Bookings: </h5> 
+
 <div class="booking-container">
     <div class="row">
     <div class="col-md-3 mt-5 offset-md-3">
     <ul>
-        <li>Booking </li>
+        <li> <p>Number of guests: {{ object.guest }}</p> </li>
         <li>Guests</li>
         <li>Date</li>
         <li>Time</li>
     </ul>
-        
+       
 
         <button id="submit-button" class="btn btn-success">Edit Booking</button>
         <button id="submit-button" class="btn btn-success">Delete Booking</button>

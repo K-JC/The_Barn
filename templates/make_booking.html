@@ -13,7 +13,6 @@
     <form method="POST" action="my_booking.html"> 
         {% csrf_token %}
         {{ form.as_p }}
-
         <button id="submit-button" class="btn btn-success" href=" {% url 'thankyou' %}">Book Now</button>
     </form>
 </div> 

@@ -28,11 +28,6 @@ class MakeBooking(generic.CreateView):
     def success_url(make_booking):
         return render('thankyou.html')
 
-    def valid_booking():
-        guest_booking = form.save(commit=false)
-        guest_booking.user = self.request.user
-        guest_booking.save()
-        return render(guest_booking)
 
 # This class will allow for the user to edit a booking
 

@@ -7,8 +7,7 @@ urlpatterns = [
     # home url
     path('', views.Home.as_view(), name='home'),
     # Booking url
-    path('make_booking', views.MakeBooking.as_view(),
-         name='make_booking'),
+    path('make_booking', views.MakeBooking.as_view(), name='make_booking'),
     # Menu url
     path('menu', views.Menu.as_view(), name='menu'),
     # thankyou url
