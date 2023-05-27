@@ -19,14 +19,16 @@ def get(self, request):
 
 # This class will allow the user to create their booking
 
-# FIX 
+# Making Bookings WORKS on admin - Find the bug
 class MakeBooking(generic.CreateView):
     model = guest_booking
     template_name = 'make_booking.html'
     fields = (['guest', 'day', 'time', 'f_name', 'l_name', 'email'])
+    success_url = 'thankyou/' # bug here now
+    
+    def bookings_made(self, request):
+        return render(request, 'my_booking.html') 
 
-    def success_url(make_booking):
-        return render('thankyou.html')
 
 
 # This class will allow for the user to edit a booking
@@ -36,19 +38,24 @@ class BookingEdit(generic.UpdateView):
     model = guest_booking
     template_name = 'edit_booking.html'
     fields = (['guest', 'day', 'time', 'first_name', 'last_name', 'email'])
-    success_url = 'my_booking.html'
+    success_url = 'thankyou'
 
 
 # This class will allow for the user to delete their booking
 class BookingDelete(generic.DeleteView):
     model = guest_booking
     template_name = 'delete_booking.html'
-    success_url = 'my_booking.html'
+
+    def get(self, request):
+        return render(request, 'index.html')
 
 # Thic class will allow the user to view their bookings
 
 
 class ViewBooking(generic.ListView):
+    model = guest_booking()
+    template_name = 'my_booking.html'
+
     def get(self, request):
         return render(request, 'my_booking.html')
 
