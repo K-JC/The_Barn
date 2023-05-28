@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.views import generic
 from django.contrib.auth.decorators import login_required
 from .models import guest_booking
-from django.views.generic.edit import UpdateView, DeleteView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 
 # Restaurant home page class, renders the page in the browser
 
@@ -23,21 +23,20 @@ def get(self, request):
 class MakeBooking(generic.CreateView):
     model = guest_booking
     template_name = 'make_booking.html'
-    fields = (['guest', 'day', 'time', 'first_name', 'last_name', 'email'])
+    fields =(['guest', 'day', 'time', 'first_name', 'last_name', 'email'])
     success_url = '/thankyou/'
     
     def bookings_made(self, request):
         return render(request, 'my_booking.html') 
 
 
-
 # This class will allow for the user to edit a booking
 
-# FIX BUG
+# FIX BUG TO EDIT
 class BookingEdit(generic.UpdateView):
     model = guest_booking
     template_name = 'edit_booking.html'
-    fields = (['guest', 'day', 'time', 'first_name', 'last_name', 'email'])
+    fields = ['guest', 'day', 'time', 'first_name', 'last_name', 'email']
     
 
     def get(self, request):
@@ -45,7 +44,7 @@ class BookingEdit(generic.UpdateView):
 
 
 # This class will allow for the user to delete their booking 
-# FIX BUG
+# FIX BUG TO DELETE
 class BookingDelete(generic.DeleteView):
     model = guest_booking
     template_name = 'delete_booking.html'
