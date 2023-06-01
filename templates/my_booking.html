@@ -9,21 +9,21 @@
 <div class="booking-container">
     <div class="row">
     <div class="col-md-3 mt-5 offset-md-3">
-    <ul>
         <form method="POST">
-        {% for object in object_list %}
-        <li>Number of guests: {{ object.guest }}</li>
-        <li>Date: {{ object.day }}</li>
-        <li>Time: {{ object.time }}</li>
-        <li>First Name: {{ object.f_name }}</li>
-        <li>Last Name: {{ object.l_name }}</li>
-        <li>Email: {{ object.email }}</li>
+        {% for booking in bookings %}
+        <p>{{ user.username }}</p>
+        <p>Number of guests: {{ booking.guest }}</p>
+        <p>Date: {{ bookings.day }}</p>
+        <p>Time: {{ booking.time }}</p>
+        <p>First Name: {{ booking.first_name }}</p>
+        <p>Last Name: {{ booking.last_name }}</p>
+        <p>Email: {{ booking.email }}</p>
         {% empty %}
-        <!-- If object_list is empty  -->
-       <li>No Bookings Made Yet</li>
-       {% endfor %}
-    </ul>
+        <!-- If booking list is empty  -->
+       <p>No Bookings Made Yet</p>
        
+       {% endfor %}
+       {% csrf_token %}
 </form>
         <a href="{% url 'edit_booking' %}" class="btn btn-success">Edit Booking</a>
         <a href="{% url 'delete_booking' %}" class="btn btn-danger">Delete Booking</a>
