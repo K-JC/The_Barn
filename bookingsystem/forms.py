@@ -6,6 +6,6 @@ class BookingForm(forms.ModelForm):
 
     class Meta:
         model = guest_booking
-        fields = ['guest', 'day', 'time', 'first_name', 'last_name', 'email']
+        fields = ['guest', 'day', 'time', 'first_name', 'last_name', 'email',]
 
     

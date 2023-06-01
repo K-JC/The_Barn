@@ -10,20 +10,26 @@
     <div class="row">
     <div class="col-md-3 mt-5 offset-md-3">
         <form method="POST">
+        {% csrf_token %}
+        <p>BOOKINGS</p>
+
+     
         {% for booking in bookings %}
-        <p>{{ user.username }}</p>
+        <h1>{{ booking.user.username }}</h1>
         <p>Number of guests: {{ booking.guest }}</p>
-        <p>Date: {{ bookings.day }}</p>
+        <p>Date: {{ booking.day }}</p>
         <p>Time: {{ booking.time }}</p>
         <p>First Name: {{ booking.first_name }}</p>
         <p>Last Name: {{ booking.last_name }}</p>
         <p>Email: {{ booking.email }}</p>
+       
+    
         {% empty %}
         <!-- If booking list is empty  -->
        <p>No Bookings Made Yet</p>
        
        {% endfor %}
-       {% csrf_token %}
+       
 </form>
         <a href="{% url 'edit_booking' %}" class="btn btn-success">Edit Booking</a>
         <a href="{% url 'delete_booking' %}" class="btn btn-danger">Delete Booking</a>

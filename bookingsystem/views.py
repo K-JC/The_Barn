@@ -1,6 +1,7 @@
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404, reverse
 from django.views import generic
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
 from .models import guest_booking
 from .forms import BookingForm
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
@@ -40,32 +41,31 @@ class Thankyou(generic.DetailView):
 class MakeBooking(generic.CreateView):
     model = guest_booking
     template_name = 'make_booking.html'
-    fields = (['guest', 'day', 'time', 'first_name', 'last_name', 'email'])
-    success_url = '/thankyou/'
+    fields = ['guest', 'day', 'time', 'first_name', 'last_name', 'email']
     
-    def booking_view(request):
-        if request.method == 'POST':
+    def get_success_url(self):
+        pk = self.kwargs['pk']
+        return reverse('thankyou.html', kwargs={'pk': self.kwargs['pk']})
+        
+        def post(self, request):
             form = BookingForm(data=request.POST)
-        if form.is_valid():
-            booking = form.save(commit=False)
-            booking = request.user
-            booking = save()
-            context['form'] = form
-        else:
-            return render(request, 'thankyou.html')
+            if form.is_valid():
+                booking = form.save(commit=False)
+                booking.user = request.user
+                booking.save()
+                return super().form_valid(form)
 
 # FIX BOOKINGS NOT SHOWING ON MY BOOKING PAGE
-class ViewBooking(generic.ListView):
-    model = guest_booking()
+class ViewBooking(generic.DetailView):
+    model = guest_booking
     template_name = 'my_booking.html'
     fields = ['guest', 'day', 'time', 'first_name', 'last_name', 'email']
-
-    def get(self, request):
-        bookings = guest_booking.objects.filter(user__in=[request.user])
-        context = {'booking': bookings} #defined
-        return render(request, 'my_booking.html', context)
-
-
+   
+    
+    def get_context_data(self, *args, **kwargs):
+        context = super(ViewBooking, self).get_context_data(*args, **kwargs)
+        context["booking"] = booking.objects.all()
+        return context
 
 
 
@@ -84,9 +84,10 @@ class BookingEdit(generic.UpdateView):
 
 # This class will allow for the user to delete their booking 
 # FIX BUG TO DELETE need pk or slug?
-class BookingDelete(generic.DeleteView):
+class BookingDelete(DeleteView):
     model = guest_booking
     template_name = 'delete_booking.html'
+  
 
     def get(self, request):
-        return render(request, 'delete_booking.html')
+        return redirect('my_booking.html')
