@@ -3,7 +3,7 @@
 {% block content %} 
 
 <!--my booking section-->
-<section id="my-booking">
+<section id="my_booking">
     <h5>Your Bookings: </h5> 
 
 <div class="booking-container">
@@ -11,10 +11,10 @@
     <div class="col-md-3 mt-5 offset-md-3">
         <form method="POST">
         {% csrf_token %}
-        <p>BOOKINGS</p>
-
-     
+        <p>BOOKINGS</p> 
         {% for booking in bookings %}
+        <p>Number of guests: {{ booking.guest }}</p>
+        <p>Date: {{ booking.day }}</p>
         <h1>{{ booking.user.username }}</h1>
         <p>Number of guests: {{ booking.guest }}</p>
         <p>Date: {{ booking.day }}</p>

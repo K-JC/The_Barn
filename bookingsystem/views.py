@@ -44,29 +44,31 @@ class MakeBooking(generic.CreateView):
     fields = ['guest', 'day', 'time', 'first_name', 'last_name', 'email']
     
     def get_success_url(self):
-        pk = self.kwargs['pk']
-        return reverse('thankyou.html', kwargs={'pk': self.kwargs['pk']})
-        
-        def post(self, request):
-            form = BookingForm(data=request.POST)
-            if form.is_valid():
-                booking = form.save(commit=False)
-                booking.user = request.user
-                booking.save()
-                return super().form_valid(form)
+        return reverse('thankyou',  kwargs={'pk': self.object.pk})
 
-# FIX BOOKINGS NOT SHOWING ON MY BOOKING PAGE
+    def booking_valid(self, request):
+        form = BookingForm(data=request.POST)
+        if form.is_valid():
+            booking = form.save(commit=False)
+            booking.user = self.request.user
+            booking.save()
+            return render(request, 'thankyou.html')
+        else:
+            context = {'form': form}
+            return render(request, 'make_booking.html', context)
+
+# FIX BOOKINGS NOT SHOWING ON MY BOOKING PAGE # booking id?
+
+
 class ViewBooking(generic.DetailView):
-    model = guest_booking
     template_name = 'my_booking.html'
-    fields = ['guest', 'day', 'time', 'first_name', 'last_name', 'email']
-   
-    
-    def get_context_data(self, *args, **kwargs):
-        context = super(ViewBooking, self).get_context_data(*args, **kwargs)
-        context["booking"] = booking.objects.all()
-        return context
+    model = guest_booking
+    context = {'booking'}
 
+    def get_object(self, *args, **kwargs):
+        logged_user = self.request.user
+        return guest_booking.objects.all()
+    
 
 
 
@@ -77,7 +79,6 @@ class BookingEdit(generic.UpdateView):
     model = guest_booking
     template_name = 'edit_booking.html'
     fields = ['guest', 'day', 'time', 'first_name', 'last_name', 'email']
-
     def get(self, request):
         return render(request, 'edit_booking.html')
 
