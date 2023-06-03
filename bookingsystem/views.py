@@ -52,24 +52,24 @@ class MakeBooking(generic.CreateView):
             booking = form.save(commit=False)
             booking.user = self.request.user
             booking.save()
-            return render(request, 'thankyou.html')
-        else:
             context = {'form': form}
-            return render(request, 'make_booking.html', context)
+
+            return render(request, 'thankyou.html')
+       
+         
 
 # FIX BOOKINGS NOT SHOWING ON MY BOOKING PAGE # booking id?
 
+def ViewBooking(request):
+    form = BookingForm(request.POST or None)
+    if form.is_valid():
+        boolking.save()
 
-class ViewBooking(generic.DetailView):
-    template_name = 'my_booking.html'
-    model = guest_booking
-    context = {'booking'}
+    context = {
+        'form' : form
+    }
 
-    def get_object(self, *args, **kwargs):
-        logged_user = self.request.user
-        return guest_booking.objects.all()
-    
-
+    return render(request, 'my_booking.html', context)
 
 
 # LEAVE THIS TILL AFTER
@@ -79,6 +79,7 @@ class BookingEdit(generic.UpdateView):
     model = guest_booking
     template_name = 'edit_booking.html'
     fields = ['guest', 'day', 'time', 'first_name', 'last_name', 'email']
+    
     def get(self, request):
         return render(request, 'edit_booking.html')
 

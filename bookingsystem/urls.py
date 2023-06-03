@@ -13,7 +13,7 @@ urlpatterns = [
     # Make a Booking url
     path('make_booking/', views.MakeBooking.as_view(), name='make_booking'),
     # view Booking url
-    path('my_booking/', views.ViewBooking.as_view(), name='my_booking'),
+    path('my_booking/', views.ViewBooking, name='my_booking'),
     # Edit Booking url
     path('edit_booking/', views.BookingEdit.as_view(), name='edit_booking'),
     # Delete Booking url
