@@ -41,10 +41,10 @@ class Thankyou(generic.DetailView):
 class MakeBooking(generic.CreateView):
     model = guest_booking
     template_name = 'make_booking.html'
-    fields = ['guest', 'day', 'time', 'first_name', 'last_name', 'email']
+    form_class = BookingForm
     
     def get_success_url(self):
-        return reverse('thankyou',  kwargs={'pk': self.object.pk})
+        return reverse('thankyou')
 
     def booking_valid(self, request):
         form = BookingForm(data=request.POST)
