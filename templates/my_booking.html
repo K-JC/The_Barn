@@ -4,33 +4,28 @@
 
 <!--my booking section-->
 <section id="my_booking">
-    <h5>Your Bookings: </h5> 
+    <h5>{{ user.username }}, Here Are Your Bookings </h5> 
 
-<div class="booking-container">
+<div class="container">
     <div class="row">
-    <div class="col-md-3 mt-5 offset-md-3">
-        <form method="POST">
-        {% csrf_token %}
-        <p>BOOKINGS</p> 
-        {% for booking in bookings %}
-        <p>Number of guests: {{ booking.guest }}</p>
-        <p>Date: {{ booking.day }}</p>
-        <h1>{{ booking.user.username }}</h1>
-        <p>Number of guests: {{ booking.guest }}</p>
-        <p>Date: {{ booking.day }}</p>
-        <p>Time: {{ booking.time }}</p>
-        <p>First Name: {{ booking.first_name }}</p>
-        <p>Last Name: {{ booking.last_name }}</p>
-        <p>Email: {{ booking.email }}</p>
-       
-    
+    <div class="col-md-8 mt-3 offset-md-2">
+<!--booking in bookings?-->
+
+{% for bookings in bookings %}
+     
+        <div class="border border-dark">
+        <p>Number of guests: {{ bookings.guest }}</p>
+        <p>Date: {{ bookings.day }}</p>
+        <p>Time: {{ bookings.time }}</p>
+        <p>First Name: {{ bookings.first_name }}</p>
+        <p>Last Name: {{ bookings.last_name }}</p>
+        <p>Email: {{ bookings.email }}</p>
+       </div>
         {% empty %}
         <!-- If booking list is empty  -->
        <p>No Bookings Made Yet</p>
        
        {% endfor %}
-       
-</form>
         <a href="{% url 'edit_booking' %}" class="btn btn-success">Edit Booking</a>
         <a href="{% url 'delete_booking' %}" class="btn btn-danger">Delete Booking</a>
 </div> 

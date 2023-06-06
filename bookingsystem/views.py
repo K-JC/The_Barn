@@ -35,8 +35,7 @@ class Thankyou(generic.DetailView):
 
 
 
-# This class will allow the user to create their booking
-
+# This class will allow the user to create their booking (bookings are being made)
 
 class MakeBooking(generic.CreateView):
     model = guest_booking
@@ -58,21 +57,16 @@ class MakeBooking(generic.CreateView):
        
          
 
-# FIX BOOKINGS NOT SHOWING ON MY BOOKING PAGE # booking id?
+# View bookings made on the my_booking page/ AUTHORISED USER ONLY
+#user=request.user (hid all bookings)
 
-def ViewBooking(request):
-    form = BookingForm(request.POST or None)
-    if form.is_valid():
-        boolking.save()
-
-    context = {
-        'form' : form
-    }
-
-    return render(request, 'my_booking.html', context)
+def ViewBooking(request): 
+    if request.user.is_authenticated:
+        form_class = BookingForm
+        bookings = guest_booking.objects.filter()
+        return render(request, 'my_booking.html', {'bookings': bookings})
 
 
-# LEAVE THIS TILL AFTER
 # This class will allow for the user to edit a booking
 # FIX BUG TO EDIT id path ? or pk?
 class BookingEdit(generic.UpdateView):
