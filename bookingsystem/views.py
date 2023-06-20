@@ -70,11 +70,10 @@ def ViewBooking(request):
 # This class will allow for the user to edit a booking
 # FIX BUG TO EDIT id path ? or pk?
 
-def BookingEdit(request, booking):
+class BookingEdit(UpdateView):
     model = guest_booking
     template_name = 'edit_booking.html'
-    fields = ['guest', 'day', 'time', 'first_name', 'last_name', 'email']
-    context = {'form': form}
+    form_class = BookingForm
 
     def get(self, request):
         return render(request, 'edit_booking.html')
