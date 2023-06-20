@@ -74,7 +74,8 @@ def BookingEdit(request, booking):
     model = guest_booking
     template_name = 'edit_booking.html'
     fields = ['guest', 'day', 'time', 'first_name', 'last_name', 'email']
-    
+    context = {'form': form}
+
     def get(self, request):
         return render(request, 'edit_booking.html')
 
