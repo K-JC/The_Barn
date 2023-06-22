@@ -3,7 +3,7 @@
 {% block content %} 
 
 <!--my booking section-->
-<section id="booking.id">
+<section id="">
     <h5>{{ user.username }}, Here Are Your Bookings </h5> 
 
 <div class="container">
@@ -26,8 +26,8 @@
        <p>No Bookings Made Yet</p>
        
        {% endfor %}
-        <a href="{% url 'edit_booking' %}" class="btn btn-success">Edit Booking</a>
-        <a href="{% url 'delete_booking' %}" class="btn btn-danger">Delete Booking</a>
+        <a href="/templates/edit_booking.html{{booking.id}}" class="btn btn-success">Edit Booking</a>
+        <a href="/templates/delete_booking.html{{booking.id}}" class="btn btn-danger">Delete Booking</a>
 </div> 
 </div>
 </div>

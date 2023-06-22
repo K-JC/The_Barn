@@ -71,25 +71,26 @@ def ViewBooking(request):
 # FIX BUG TO EDIT id path ? or pk?
 
 def BookingEdit(request, booking_id):
-    booking = get_object_or_404(guest_booking, id=booking_id)
-    if request.method == 'POST':
-        form = BookingForm(data=request.POST, instance=booking)
+    template_name = 'edit_booking.html'
+    if request.user.is_authenticated:
+        bookings = get_object_or_404(guest_booking, id=booking_id)
+        if booking.user == request.user:
+            if request.method == 'POST':
+                form = BookingForm(request.POST, instance=booking)
         if form.is_valid():
             form.save()
-        return redirect('edit_booking.html')
+            return redirect('edit_booking.html')
     form = BookingForm(instance=booking)
-    return render(request, 'edit_booking.html', {
-        'form': form
-        })
+    context = {'form': form}
+    return render(request, 'edit_booking.html', context)
 
 
 
 # This class will allow for the user to delete their booking 
 # FIX BUG TO DELETE need pk or slug?
 def BookingDelete(request):
-    model = guest_booking
-    template_name = 'delete_booking.html'
-  
-
-    def get(self, request):
-        return redirect('my_booking.html')
+    if request.user.is_authenticated:
+        booking = get_object_or_404(guest_booking, id=booking_id)
+        if booking.user == request.user:
+            booking.delete()
+    return redirect('my_booking.html')
