@@ -49,7 +49,7 @@
                 <a class="nav-links" href="{% url 'make_booking' %}">Book A Table</a>
             </li>
             <li class="nav-options">
-                <a class="nav-links" href="{% url 'my_booking' %}">My Bookings</a>
+                <a class="nav-links" href="{% url 'my_booking' booking.id %}">My Bookings</a>
             </li>
             <li class="nav-options">
                 <a class="nav-links" href="{% url 'menu' %}">Menu</a>

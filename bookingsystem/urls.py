@@ -1,6 +1,7 @@
 # URLS for booking system
 from django.urls import path
 from . import views
+
 APP_NAME = "thebarn"
 
 urlpatterns = [
@@ -15,7 +16,7 @@ urlpatterns = [
     # view Booking url
     path('my_booking/', views.ViewBooking, name='my_booking'),
     # Edit Booking url
-    path('edit_booking/', views.BookingEdit.as_view(), name='edit_booking'),
+    path('edit_booking/<booking_id>', views.BookingEdit, name='edit_booking'),
     # Delete Booking url
-    path('delete_booking/', views.BookingDelete.as_view(), name='delete_booking'),
+    path('delete_booking/<booking_id>', views.BookingDelete, name='delete_booking'),
 ]
