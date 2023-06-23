@@ -26,9 +26,9 @@
        <p>No Bookings Made Yet</p>
        
        {% endfor %}
-       <!--fix-->
-        <a href="/edit_booking.html/{{booking.id}}" class="btn btn-success">Edit Booking</a>
-        <a href="/delete_booking.html/{{booking.id}}" class="btn btn-danger">Delete Booking</a>
+       <!--EDIT AND DELETE PAGE FIX-->
+        <a href="{{ edit_booking.html }}" class="btn btn-success">Edit Booking</a>
+        <a href="/delete_booking.html/{{ booking.id }}/" class="btn btn-danger">Delete Booking</a>
 </div> 
 </div>
 </div>

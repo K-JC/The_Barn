@@ -72,6 +72,7 @@ def ViewBooking(request):
 
 def BookingEdit(request, booking_id):
     template_name = 'edit_booking.html'
+    form_class = BookingForm
     if request.user.is_authenticated:
         bookings = get_object_or_404(guest_booking, id=booking_id)
         if booking.user == request.user:
@@ -82,15 +83,20 @@ def BookingEdit(request, booking_id):
             return redirect('edit_booking.html')
     form = BookingForm(instance=booking)
     context = {'form': form}
-    return render(request, 'edit_booking.html', context)
+    return render(request, 'edit_booking', context)
 
 
 
 # This class will allow for the user to delete their booking 
 # FIX BUG TO DELETE need pk or slug?
-def BookingDelete(request):
-    if request.user.is_authenticated:
-        booking = get_object_or_404(guest_booking, id=booking_id)
-        if booking.user == request.user:
-            booking.delete()
-    return redirect('my_booking.html')
+
+def BookingDelete(request, booking_id):
+    template_name = 'delete_booking.html'
+    context = {}
+    booking = get_object_or_404(guest_booking, id=booking_id)
+
+    if request.method == "POST":
+        booking.delete()
+
+    return render(request, 'my_booking.html', context)
+
