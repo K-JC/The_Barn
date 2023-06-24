@@ -26,10 +26,10 @@
        <p>No Bookings Made Yet</p>
        
        {% endfor %}
-       <!--EDIT AND DELETE PAGE FIX-->
+      <!--booking id?-->
        <div class="bookingbutton">
-        <a href="{% url 'edit_booking' %}" button type="submit" class="btn btn-danger">EDIT ME PLEASE</a>
-        <a href="{% url 'delete_booking' %}" button type="submit" class="btn btn-danger">DELETE ME HERE</a>
+        <a href="{% url 'edit_booking' %}" button type="submit" class="btn btn-success">Edit Booking</a>
+        <a href="{% url 'delete_booking' %}" button type="submit" class="btn btn-danger">Delete Booking</a>
 </form>
 
 </div>
