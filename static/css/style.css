@@ -83,7 +83,7 @@ p {
     margin-top: 10px;
     margin-left: 11px;
     margin-right: 11px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
 .fish-chips {
@@ -152,4 +152,11 @@ margin-bottom: 40px;
     background-color: #b99700;
     color: black;
 }
+
+#user-booking {
+    margin-top: 20px;
+    text-align: center;
+}
+
+
 
