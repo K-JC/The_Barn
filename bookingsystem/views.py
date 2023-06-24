@@ -71,14 +71,30 @@ def ViewBooking(request):
 # FIX BUG TO EDIT id path ? or pk?
 
 class BookingEdit(generic.UpdateView):
+    model = guest_booking
+    form_class = BookingForm
+    template_name = 'edit_booking.html'
+    success_url = 'my_booking.html'
 
-    def get(self, request):
-        return render(request, 'edit_booking.html')
+    def booking_valid(self, request):
+        form = BookingForm(data=request.POST)
+        if form.is_valid():
+            booking = form.save(commit=False)
+            booking.user = self.request.user
+            booking.save()
+            context = {'form': form}
+
+    
+    def get_object(self):
+        return self.request.user
+ 
 
 
 # This class will allow for the user to delete their booking 
 # FIX BUG TO DELETE need pk or slug?
 
 class BookingDelete(generic.DeleteView):
-    def get(self, request):
-        return render(request, 'delete_booking.html')
+    model = guest_booking
+    template_name = 'delete_booking.html'
+    success_url = '/'
+  
