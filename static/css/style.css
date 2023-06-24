@@ -158,5 +158,41 @@ margin-bottom: 40px;
     text-align: center;
 }
 
+.menu-title {
+    text-align: center;
+    color: #b99700;
+}
 
+.menu-text {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #b99700;
+    font-size: larger;
+    font-weight:bolder;
+}
+
+.fa-file-pdf {
+    color: #b99700;
+    margin-left: 7px;
+    font-size: 25px;
+}
+
+/*menu image*/
+#menu-image{
+    background: url('https://res.cloudinary.com/dugjc92qc/image/upload/v1687592603/restaurant_table_xfcww3.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment:scroll;
+    min-height: 330px;
+    max-width: 100%;
+    }
+.menu-container-1{
+    padding-top: 70px;
+  
+}
+.menu-container {
+    background-color: rgba(247, 247, 246, 0.7);
+    padding-bottom: 10px;
+}    
 
