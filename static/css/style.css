@@ -60,8 +60,10 @@ span i {
 
 }
 
-#bookingbutton {
+.bookingbutton {
     text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
 .food-image {
@@ -79,9 +81,9 @@ p {
     font-weight: 100;
     font-size: smaller;
     margin-top: 10px;
-    margin-left: 8px;
-    margin-right: 8px;
-    
+    margin-left: 11px;
+    margin-right: 11px;
+    margin-bottom: 30px;
 }
 
 .fish-chips {
@@ -129,3 +131,25 @@ footer {
     background-color: #edce43;
     color: white;
 }
+
+#submit-button{
+    text-align: center;
+}
+
+/*Thank you image */
+.thankyou-image{
+background: url('https://res.cloudinary.com/dugjc92qc/image/upload/v1687592603/restaurant_table_xfcww3.jpg');
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+background-attachment:scroll;
+min-height: 200px;
+max-width: 100%;
+margin-bottom: 40px;
+}
+
+.btn-dark {
+    background-color: #b99700;
+    color: black;
+}
+

@@ -3,7 +3,7 @@
 {% block content %} 
 
 <!--my booking section-->
-<section id="">
+<section id=" ">
     <h5>{{ user.username }}, Here Are Your Bookings </h5> 
 
 <div class="container">
@@ -27,14 +27,17 @@
        
        {% endfor %}
        <!--EDIT AND DELETE PAGE FIX-->
+       <div class="bookingbutton">
         <a href="{{ edit_booking.html }}" class="btn btn-success">Edit Booking</a>
         <a href="/delete_booking.html/{{ booking.id }}/" class="btn btn-danger">Delete Booking</a>
-</div> 
+</div>
+</div>
 </div>
 </div>
 </section>
 
+<div class="bookingbutton">
 <a href="{% url 'home' %}" class="btn btn-dark">Back To HomePage</a>
-
+</div>
 
 {%endblock%}
