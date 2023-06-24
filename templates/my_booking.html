@@ -28,8 +28,10 @@
        {% endfor %}
        <!--EDIT AND DELETE PAGE FIX-->
        <div class="bookingbutton">
-        <a href="{{ edit_booking.html }}" class="btn btn-success">Edit Booking</a>
-        <a href="/delete_booking.html/{{ booking.id }}/" class="btn btn-danger">Delete Booking</a>
+        <a href="{% url 'edit_booking' %}" button type="submit" class="btn btn-danger">EDIT ME PLEASE</a>
+        <a href="{% url 'delete_booking' %}" button type="submit" class="btn btn-danger">DELETE ME HERE</a>
+</form>
+
 </div>
 </div>
 </div>
