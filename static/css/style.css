@@ -196,3 +196,40 @@ margin-bottom: 40px;
     padding-bottom: 10px;
 }    
 
+
+  
+/*media querys*/
+/*Large screen sizes with max width of 1300px*/
+
+@media only screen and (max-width:1300px) {
+
+    .menu-title {
+        font-size: 100%;
+        left: 110px;
+    }
+
+    #user-booking, h6 {
+        font-size: 20px;
+    }
+  
+}
+
+
+/*Medium screen with a min screen width of 768px*/
+
+@media only screen and (min-width: 768px) {
+
+    .menu-title {
+        font-size: 24px;
+        position: relative;
+    }
+    
+}
+
+/*Small screen sizes with a max width of 320px*/
+@media screen and (max-width: 320px) {
+
+    .menu-title {
+        font-size: 18px;
+    }
+}
