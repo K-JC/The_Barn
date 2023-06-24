@@ -56,8 +56,8 @@ span i {
 
 .btn-book {
     background-color: #b99700;
-    margin: 10px;
-    
+    margin: 20px;
+
 }
 
 #bookingbutton {
@@ -93,6 +93,10 @@ p {
     width: 300px;
 }
 
+.text {
+    margin-top: 20px;
+}
+
 /*footer area*/
 
 footer {
@@ -125,4 +129,3 @@ footer {
     background-color: #edce43;
     color: white;
 }
-
