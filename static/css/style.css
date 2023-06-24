@@ -148,6 +148,7 @@ max-width: 100%;
 margin-bottom: 40px;
 }
 
+
 .btn-dark {
     background-color: #b99700;
     color: black;
@@ -211,7 +212,16 @@ margin-bottom: 40px;
     #user-booking, h6 {
         font-size: 20px;
     }
-  
+
+    p {
+        font-size: 18px;
+    }
+    #make_booking, h5{
+        right: 10px;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
 }
 
 
@@ -223,7 +233,6 @@ margin-bottom: 40px;
         font-size: 24px;
         position: relative;
     }
-    
 }
 
 /*Small screen sizes with a max width of 320px*/
