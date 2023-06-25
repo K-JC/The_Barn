@@ -45,22 +45,16 @@ class MakeBooking(generic.CreateView):
     def get_success_url(self):
         return reverse('thankyou')
 
-    def booking_valid(self, request):
-        form = BookingForm(data=request.POST)
-        if form.is_valid():
-            booking = form.save(commit=False)
-            booking.user = self.request.user
-            booking.save()
-            context = {'form': form}
+    def booking_valid(self, form):
+        booking = form.save(commit=False)
+        booking.user = self.request.user
+        booking.save()
+        return super().booking_valid(form)
 
-            return render(request, 'thankyou.html')
-       
-         
 
-# View bookings made on the my_booking page/ AUTHORISED USER ONLY
-#user=request.user (hid all bookings)
+# View bookings made on the my_booking page
 
-def ViewBooking(request): 
+def ViewBooking(request):
     if request.user.is_authenticated:
         form_class = BookingForm
         bookings = guest_booking.objects.filter()
@@ -89,18 +83,18 @@ class BookingEdit(generic.UpdateView):
                 form = BookingForm(instance=edit_booking)
                 return render(request, 'edit_booking.html', {'form': form})
 
-    # called with pk?
+    # called with pk
     def get_object(self):
         return self.request.user
 
 # This class will allow for the user to delete their booking 
-# FIX BUG TO DELETE need pk or slug?
+# FIX BUG TO DELETE need pk 
 
 class BookingDelete(generic.DeleteView):
     model = guest_booking
     template_name = 'delete_booking.html'
     success_url = 'my_booking.html'
      
-     # deletes user completey
+     # deletes user completey?
     def get_object(self):
         return self.request.user

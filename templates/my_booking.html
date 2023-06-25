@@ -11,7 +11,7 @@
     <div class="col-md-8 mt-3 offset-md-2">
 <!--booking in bookings?-->
 
-{% for bookings in bookings %}
+        {% for bookings in bookings %}
      
         <div class="border border-dark">
         <p>Number of guests: {{ bookings.guest }}</p>
@@ -20,6 +20,7 @@
         <p>First Name: {{ bookings.first_name }}</p>
         <p>Last Name: {{ bookings.last_name }}</p>
         <p>Email: {{ bookings.email }}</p>
+        
         <a href="{% url 'edit_booking' %}" button type="submit" class="btn btn-success" align="right">Edit Booking</a>
        </div>
         {% empty %}
