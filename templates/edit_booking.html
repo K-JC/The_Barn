@@ -4,7 +4,7 @@
 
 <!--edit booking section-->
 <section id="" class="booking-table">
-    <h5>Edit Your Booking Here: </h5>
+    <h5>{{ user.username }} Edit Your Booking Here: </h5>
 <div class="booking-container">
     <div class="row">
     <div class="col-md-3 mt-5 offset-md-3">
@@ -13,7 +13,7 @@
         {{ form.as_p }}
     <a href="{% url 'my_booking' %}" button type="submit" class="btn btn-success">Confirm Changes</a>
     <a href="{% url 'my_booking' %}" button type="submit" class="btn btn-dark">Back To My Bookings</a>
-    </form>
+    </form> 
 </div> 
 </div>
 </div>
