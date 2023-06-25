@@ -20,16 +20,14 @@
         <p>First Name: {{ bookings.first_name }}</p>
         <p>Last Name: {{ bookings.last_name }}</p>
         <p>Email: {{ bookings.email }}</p>
+        <a href="{% url 'edit_booking' %}" button type="submit" class="btn btn-success" align="right">Edit Booking</a>
        </div>
         {% empty %}
         <!-- If booking list is empty  -->
        <p>No Bookings Made Yet</p>
         
        {% endfor %}
-      <!--booking id?-->
-       <div class="bookingbutton">
-        <a href="{% url 'edit_booking' %}" button type="submit" class="btn btn-success">Edit Booking</a>
-        <a href="{% url 'delete_booking' %}" button type="submit" class="btn btn-danger">Delete Booking</a>
+     
 </form>
 
 </div>
@@ -39,6 +37,7 @@
 </section>
 
 <div class="bookingbutton">
+<a href="{% url 'delete_booking' %}" button type="submit" class="btn btn-danger">Delete Booking</a>
 <a href="{% url 'home' %}" class="btn btn-dark">Back To HomePage</a>
 </div>
 
