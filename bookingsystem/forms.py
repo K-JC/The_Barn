@@ -1,5 +1,5 @@
 from django import forms
-from .models import guest_booking
+from .models import GuestBooking
 
 # Calender Option when booking 
 class DateInput(forms.DateInput):
@@ -8,6 +8,6 @@ class DateInput(forms.DateInput):
 
 class BookingForm(forms.ModelForm):
     class Meta:
-        model = guest_booking
+        model = GuestBooking
         fields = ['guest', 'day', 'time', 'first_name', 'last_name', 'email',]
         widgets = {'day': DateInput()}

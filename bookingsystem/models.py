@@ -30,7 +30,7 @@ PICK_GUESTS = (
 # booking model with CRUD functionality
 
 
-class guest_booking (models.Model):
+class GuestBooking(models.Model):
     guest = models.CharField(max_length=10, choices=PICK_GUESTS)
     day = models.DateField(default=datetime.now)
     time = models.CharField(max_length=10, choices=PICK_TIME)

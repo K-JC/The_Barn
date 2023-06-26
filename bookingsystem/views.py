@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404, reverse
 from django.views import generic
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
-from .models import guest_booking
+from .models import GuestBooking
 from .forms import BookingForm
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 
@@ -10,7 +10,7 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 
 
 class Home (generic.ListView):
-    model = guest_booking
+    model = GuestBooking
     template_name = 'index.html'
 
 
@@ -38,7 +38,7 @@ class Thankyou(generic.DetailView):
 # This class will allow the user to create their booking (bookings are being made)
 
 class MakeBooking(generic.CreateView):
-    model = guest_booking
+    model = GuestBooking
     template_name = 'make_booking.html'
     form_class = BookingForm
     
@@ -62,7 +62,7 @@ class MakeBooking(generic.CreateView):
 # View bookings made on the my_booking page
 
 def ViewBooking(request):
-    bookings = guest_booking.objects.filter()
+    bookings = GuestBooking.objects.filter()
     context = {'bookings': bookings}
     return render(request, 'my_booking.html', context)
 
@@ -71,13 +71,13 @@ def ViewBooking(request):
 # Get booking update rendered to my_booking page
 
 class BookingEdit(generic.UpdateView):
-    model = guest_booking
+    model = GuestBooking
     form_class = BookingForm
     template_name = 'edit_booking.html'
     success_url = 'my_booking.html'
 
     def booking_edit(request, id):
-        book = get_object_or_404(guest_booking, id=id)
+        book = get_object_or_404(GuestBooking, id=id)
         if request.method == 'POST':
             form = BookingForm(request.POST, instance=book)
             if form.is_valid():
@@ -97,12 +97,12 @@ class BookingEdit(generic.UpdateView):
 # FIX BUG TO DELETE need pk 
 
 class BookingDelete(generic.DeleteView):
-    model = guest_booking
+    model = GuestBooking
     template_name = 'delete_booking.html'
     success_url = 'my_booking.html'
     
     def delete(request, id):
-        booking = get_object_or_404(guest_booking, id=id)
+        booking = get_object_or_404(GuestBooking, id=id)
         if request.method == 'POST':
             form = BookingForm(request.POST, instance=booking)
             if booking.delete():
