@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404, reverse
 from django.views import generic
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.models import User
 from .models import GuestBooking
 from .forms import BookingForm
@@ -37,7 +37,7 @@ class Thankyou(generic.DetailView):
 # This class allows the registerd user the ability to create their booking
 
 
-class MakeBooking(generic.CreateView):
+class MakeBooking(generic.CreateView, LoginRequiredMixin):
     model = GuestBooking
     template_name = 'make_booking.html'
     form_class = BookingForm
@@ -68,7 +68,7 @@ def ViewBooking(request):
 
 # This class will allow for the user to edit a booking and be redirected to my_booking page
 
-class BookingEdit(generic.UpdateView):
+class BookingEdit(generic.UpdateView, LoginRequiredMixin):
     model = GuestBooking
     fields = ['guest', 'day', 'time']
     template_name = 'edit_booking.html'
@@ -77,7 +77,7 @@ class BookingEdit(generic.UpdateView):
 
 # This class will allow for the user to delete their booking and be redirected to my_booking page
 
-class BookingDelete(generic.DeleteView):
+class BookingDelete(generic.DeleteView, LoginRequiredMixin):
     model = GuestBooking
     template_name = 'delete_booking.html'
     success_url = '/my_booking/'
