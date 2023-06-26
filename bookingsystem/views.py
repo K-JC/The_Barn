@@ -37,7 +37,7 @@ class Thankyou(generic.DetailView):
 # This class allows the registerd user the ability to create their booking
 
 
-class MakeBooking(generic.CreateView, LoginRequiredMixin):
+class MakeBooking(LoginRequiredMixin, generic.CreateView):
     model = GuestBooking
     template_name = 'make_booking.html'
     form_class = BookingForm
@@ -61,6 +61,7 @@ class MakeBooking(generic.CreateView, LoginRequiredMixin):
 # Viewing any bookings made via the my_booking page
 
 def ViewBooking(request):
+    #id=request.user.id hides the booking for 
     bookings = GuestBooking.objects.filter()
     context = {'bookings': bookings}
     return render(request, 'my_booking.html', context)
@@ -68,16 +69,17 @@ def ViewBooking(request):
 
 # This class will allow for the user to edit a booking and be redirected to my_booking page
 
-class BookingEdit(generic.UpdateView, LoginRequiredMixin):
+class BookingEdit(LoginRequiredMixin, generic.UpdateView):
     model = GuestBooking
     fields = ['guest', 'day', 'time']
     template_name = 'edit_booking.html'
     success_url = '/my_booking/'
 
+ 
 
 # This class will allow for the user to delete their booking and be redirected to my_booking page
 
-class BookingDelete(generic.DeleteView, LoginRequiredMixin):
+class BookingDelete(LoginRequiredMixin, generic.DeleteView):
     model = GuestBooking
     template_name = 'delete_booking.html'
     success_url = '/my_booking/'

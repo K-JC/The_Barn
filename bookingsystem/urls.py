@@ -20,4 +20,4 @@ urlpatterns = [
     path('<pk>/edit_booking/', views.BookingEdit.as_view(), name='edit_booking'),
     # Delete Booking url
     path('<pk>/delete_booking/', views.BookingDelete.as_view(), name='delete_booking'),
-]
+] 
