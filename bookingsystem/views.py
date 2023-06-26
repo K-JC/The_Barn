@@ -45,20 +45,26 @@ class MakeBooking(generic.CreateView):
     def get_success_url(self):
         return reverse('thankyou')
 
-    def booking_valid(self, form):
-        booking = form.save(commit=False)
-        booking.user = self.request.user
-        booking.save()
-        return super().booking_valid(form)
+    def booking_add(request):
+        if request.method == 'POST':
+            if form.is_valid:
+                booking = form.save()
+                booking.user = request.user
+                booking.save()
+            return redirect('thankyou')
+        else:
+            form = BookingForm()
+            context = {'form': form}
+            return render(request, 'make_booking.html', context)
+
 
 
 # View bookings made on the my_booking page
 
 def ViewBooking(request):
-    if request.user.is_authenticated:
-        form_class = BookingForm
-        bookings = guest_booking.objects.filter()
-        return render(request, 'my_booking.html', {'bookings': bookings})
+    bookings = guest_booking.objects.filter()
+    context = {'bookings': bookings}
+    return render(request, 'my_booking.html', context)
 
 
 # This class will allow for the user to edit a booking
@@ -70,18 +76,18 @@ class BookingEdit(generic.UpdateView):
     template_name = 'edit_booking.html'
     success_url = 'my_booking.html'
 
-    def edit_valid(request, booking_id):
-        if request.user.is_authenticated:
-            edit_booking = get_object_or_404(guest_booking, id=booking_id)
-            if booking.user == request.user:
-                if request.method == 'POST':
-                    form = BookingForm(data=request.POST, instance=edit_booking)
-                    if form.is_valid():
-                        form.save()
-                return redirect('my_booking.html')
-            else:
-                form = BookingForm(instance=edit_booking)
-                return render(request, 'edit_booking.html', {'form': form})
+    def booking_edit(request, id):
+        book = get_object_or_404(guest_booking, id=id)
+        if request.method == 'POST':
+            form = BookingForm(request.POST, instance=book)
+            if form.is_valid():
+                booking = form.save()
+                booking.user = request.user
+                booking.save()
+                return redirect('index.html')
+                form = BookingForm(instance=book)
+                context = {'form': form}
+                return render(request, 'edit_booking.html', context)
 
     # called with pk
     def get_object(self):
@@ -94,7 +100,19 @@ class BookingDelete(generic.DeleteView):
     model = guest_booking
     template_name = 'delete_booking.html'
     success_url = 'my_booking.html'
-     
-     # deletes user completey?
+    
+    def delete(request, id):
+        booking = get_object_or_404(guest_booking, id=id)
+        if request.method == 'POST':
+            form = BookingForm(request.POST, instance=booking)
+            if booking.delete():
+                return redirect('index.html')
+                form = BookingForm(instance=booking)
+                context = {'form': form}
+                return render(request, 'delete_booking', context)
+
+     # deletes user completey? 
+     # Generic detail view BookingDelete must be called with either an object pk or a 
+     # slug in the URLconf.
     def get_object(self):
         return self.request.user

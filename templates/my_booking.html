@@ -11,18 +11,20 @@
     <div class="col-md-8 mt-3 offset-md-2">
 <!--booking in bookings?-->
 
-        {% for bookings in bookings %}
+        {% for booking in bookings %}
      
         <div class="border border-dark">
-        <p>Number of guests: {{ bookings.guest }}</p>
-        <p>Date: {{ bookings.day }}</p>
-        <p>Time: {{ bookings.time }}</p>
-        <p>First Name: {{ bookings.first_name }}</p>
-        <p>Last Name: {{ bookings.last_name }}</p>
-        <p>Email: {{ bookings.email }}</p>
-        
+        <p>Number of guests: {{ booking.guest }}</p>
+        <p>Date: {{ booking.day }}</p>
+        <p>Time: {{ booking.time }}</p>
+        <p>First Name: {{ booking.first_name }}</p>
+        <p>Last Name: {{ booking.last_name }}</p>
+        <p>Email: {{ booking.email }}</p>
+        <div>
         <a href="{% url 'edit_booking' %}" button type="submit" class="btn btn-success" align="right">Edit Booking</a>
+        <a href="{% url 'delete_booking' %}" button type="submit" class="btn btn-danger">Delete Booking</a>
        </div>
+        </div>
         {% empty %}
         <!-- If booking list is empty  -->
        <p>No Bookings Made Yet</p>
@@ -30,16 +32,14 @@
        {% endfor %}
      
 </form>
+<div class="bookingbutton">
 
+<a href="{% url 'home' %}" class="btn btn-dark">Back To HomePage</a>
 </div>
 </div>
 </div>
 </div>
 </section>
 
-<div class="bookingbutton">
-<a href="{% url 'delete_booking' %}" button type="submit" class="btn btn-danger">Delete Booking</a>
-<a href="{% url 'home' %}" class="btn btn-dark">Back To HomePage</a>
-</div>
 
 {%endblock%}
