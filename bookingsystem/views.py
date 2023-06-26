@@ -73,7 +73,7 @@ class BookingEdit(generic.UpdateView):
     model = GuestBooking
     fields = ['guest', 'day', 'time']
     template_name = 'edit_booking.html'
-    success_url = 'my_booking'
+    success_url = '/my_booking/'
 
 
 # This class will allow for the user to delete their booking 
@@ -81,4 +81,4 @@ class BookingEdit(generic.UpdateView):
 class BookingDelete(generic.DeleteView):
     model = GuestBooking
     template_name = 'delete_booking.html'
-    success_url = 'my_booking'
+    success_url = '/my_booking/'

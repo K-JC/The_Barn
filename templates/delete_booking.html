@@ -9,10 +9,12 @@
     <div class="row">
     <div class="col-md-3 mt-5 offset-md-3">
     <p>Wait {{ user.username }}, Are You Sure You Want To Delete Your Booking ?</p>   
+    
     <form method="POST">
         {% csrf_token %}
 
         <div class="border border-dark">
+            <p>Booking No: {{booking.id}}</p>
             <p>Number of guests: {{ booking.guest }}</p>
             <p>Date: {{ booking.day }}</p>
             <p>Time: {{ booking.time }}</p>
@@ -22,11 +24,10 @@
             
             <div class="bookingbutton"></div>
             <input type="submit" value="Confirm Booking Delete" class="btn btn-danger">
-             <a href="{% url 'home' %}" class="btn btn-dark">Back To Home</a>
             </div>
-    
     </form>
-
+    
+ <a href="{% url 'home' %}" class="btn btn-dark">Back To Home</a>
    
 </div> 
 </div>
