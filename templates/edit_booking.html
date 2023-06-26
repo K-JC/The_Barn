@@ -8,11 +8,11 @@
 <div class="booking-container">
     <div class="row">
     <div class="col-md-3 mt-5 offset-md-3">
-    <form method="POST" action="{%url 'my_booking' %}"> 
+    <form method="POST"> 
         {% csrf_token %}
         {{ form.as_p }}
-    <a href="{% url 'my_booking' %}" button type="submit" class="btn btn-success">Confirm Changes</a>
-    <a href="{% url 'my_booking' %}" button type="submit" class="btn btn-dark">Back To My Bookings</a>
+    <input type="submit" value="Confirm Changes" class="btn btn-success">
+    <a href="{% url 'my_booking' booking.id %}" button type="submit" class="btn btn-dark">Back To My Bookings</a>
     </form> 
 </div> 
 </div>

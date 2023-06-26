@@ -68,51 +68,17 @@ def ViewBooking(request):
 
 
 # This class will allow for the user to edit a booking
-# Get booking update rendered to my_booking page
 
 class BookingEdit(generic.UpdateView):
     model = GuestBooking
-    form_class = BookingForm
+    fields = ['guest', 'day', 'time']
     template_name = 'edit_booking.html'
-    success_url = 'my_booking.html'
+    success_url = 'my_booking'
 
-    def booking_edit(request, id):
-        book = get_object_or_404(GuestBooking, id=id)
-        if request.method == 'POST':
-            form = BookingForm(request.POST, instance=book)
-            if form.is_valid():
-                booking = form.save()
-                booking.user = request.user
-                booking.save()
-                return redirect('index.html')
-                form = BookingForm(instance=book)
-                context = {'form': form}
-                return render(request, 'edit_booking.html', context)
-
-    # called with pk
-    def get_object(self):
-        return self.request.user
 
 # This class will allow for the user to delete their booking 
-# FIX BUG TO DELETE need pk 
-
+ 
 class BookingDelete(generic.DeleteView):
     model = GuestBooking
     template_name = 'delete_booking.html'
-    success_url = 'my_booking.html'
-    
-    def delete(request, id):
-        booking = get_object_or_404(GuestBooking, id=id)
-        if request.method == 'POST':
-            form = BookingForm(request.POST, instance=booking)
-            if booking.delete():
-                return redirect('index.html')
-                form = BookingForm(instance=booking)
-                context = {'form': form}
-                return render(request, 'delete_booking', context)
-
-     # deletes user completey? 
-     # Generic detail view BookingDelete must be called with either an object pk or a 
-     # slug in the URLconf.
-    def get_object(self):
-        return self.request.user
+    success_url = 'my_booking'
