@@ -3,31 +3,19 @@
 {% block content %}
 
 <!--delete booking section-->
-<section id="make-booking" class="booking-table">
-    <h5>Delete Your Booking Here: </h5>
+<section class="">
+    <h5>Wait {{ user.username }}, Are You Sure You Want To Delete Your Booking ? </h5>
 <div class="booking-container">
     <div class="row">
     <div class="col-md-3 mt-5 offset-md-3">
-    <p>Wait {{ user.username }}, Are You Sure You Want To Delete Your Booking ?</p>   
-    
     <form method="POST">
         {% csrf_token %}
-
-        <div class="border border-dark">
-            <p>Booking No: {{booking.id}}</p>
-            <p>Number of guests: {{ booking.guest }}</p>
-            <p>Date: {{ booking.day }}</p>
-            <p>Time: {{ booking.time }}</p>
-            <p>First Name: {{ booking.first_name }}</p>
-            <p>Last Name: {{ booking.last_name }}</p>
-            <p>Email: {{ booking.email }}</p>
-            
-            <div class="bookingbutton"></div>
-            <input type="submit" value="Confirm Booking Delete" class="btn btn-danger">
-            </div>
+    <div class="bookingbutton">
+    <input type="submit" value="Confirm Booking Delete" class="btn btn-danger">
+    </div>
     </form>
     
- <a href="{% url 'home' %}" class="btn btn-dark">Back To Home</a>
+ <a href="{% url 'home' %}" class="btn btn-dark ">Back To Home</a>
    
 </div> 
 </div>

@@ -19,14 +19,14 @@ def get(self, request):
     return render(request, 'base.html')
 
 
-# class allowing menu page to be rendered in the browser 
+# class allowing menu page to be rendered
 
 
 class Menu(generic.DetailView):
     def get(self, request):
         return render(request, 'menu.html')
 
-# class for the thank you page to be rendered in the browser
+# class for the thank you page to be rendered
 
 
 class Thankyou(generic.DetailView):
@@ -34,14 +34,14 @@ class Thankyou(generic.DetailView):
         return render(request, 'thankyou.html')
 
 
+# This class allows the registerd user the ability to create their booking
 
-# This class will allow the user to create their booking (bookings are being made)
 
 class MakeBooking(generic.CreateView):
     model = GuestBooking
     template_name = 'make_booking.html'
     form_class = BookingForm
-    
+
     def get_success_url(self):
         return reverse('thankyou')
 
@@ -58,8 +58,7 @@ class MakeBooking(generic.CreateView):
             return render(request, 'make_booking.html', context)
 
 
-
-# View bookings made on the my_booking page
+# Viewing any bookings made via the my_booking page
 
 def ViewBooking(request):
     bookings = GuestBooking.objects.filter()
@@ -67,7 +66,7 @@ def ViewBooking(request):
     return render(request, 'my_booking.html', context)
 
 
-# This class will allow for the user to edit a booking
+# This class will allow for the user to edit a booking and be redirected to my_booking page
 
 class BookingEdit(generic.UpdateView):
     model = GuestBooking
@@ -76,8 +75,8 @@ class BookingEdit(generic.UpdateView):
     success_url = '/my_booking/'
 
 
-# This class will allow for the user to delete their booking 
- 
+# This class will allow for the user to delete their booking and be redirected to my_booking page
+
 class BookingDelete(generic.DeleteView):
     model = GuestBooking
     template_name = 'delete_booking.html'
