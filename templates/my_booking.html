@@ -4,6 +4,7 @@
 
 <!--my booking section-->
 <section id="user-booking">
+
     <h5>{{ user.username }}, Here Are Your Bookings </h5> 
 
 <div class="container">
@@ -12,16 +13,15 @@
 <!--booking in bookings-->
 
         {% for booking in bookings %}
-<form>     
+        
         <div class="border border-dark">
-        <p>Booking No: {{booking.id}}</p>
         <p>Number of guests: {{ booking.guest }}</p>
         <p>Date: {{ booking.day }}</p>
         <p>Time: {{ booking.time }}</p>
         <p>First Name: {{ booking.first_name }}</p>
         <p>Last Name: {{ booking.last_name }}</p>
         <p>Email: {{ booking.email }}</p>
-        
+    
         <div>
         <a href="{% url 'edit_booking' booking.id %}" button type="submit" class="btn btn-success" align="right">Edit Booking</a>
         <a href="{% url 'delete_booking' booking.id %}" button type="submit" class="btn btn-danger">Delete Booking</a>
@@ -33,9 +33,8 @@
         
        {% endfor %}
      
-</form>
-<div class="bookingbutton">
 
+<div class="bookingbutton">
 <a href="{% url 'home' %}" class="btn btn-dark">Back To HomePage</a>
 </div>
 </div>

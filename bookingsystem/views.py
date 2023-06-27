@@ -45,11 +45,11 @@ class MakeBooking(LoginRequiredMixin, generic.CreateView):
     def get_success_url(self):
         return reverse('thankyou')
 
-    def booking_add(request):
+    def booking_add(self, request):
         if request.method == 'POST':
             if form.is_valid:
-                booking = form.save()
-                booking.user = request.user
+                booking = form.save(commit=False)
+                booking.user = self.request.user
                 booking.save()
             return redirect('thankyou')
         else:
@@ -59,11 +59,13 @@ class MakeBooking(LoginRequiredMixin, generic.CreateView):
 
 
 # Viewing any bookings made via the my_booking page
+ #id=request.user.id hides the booking for
 
 def ViewBooking(request):
-    #id=request.user.id hides the booking for 
-    bookings = GuestBooking.objects.filter()
-    context = {'bookings': bookings}
+    if request.user.is_authenticated:
+        bookings = GuestBooking.objects.filter()
+        context = {'bookings': bookings}
+
     return render(request, 'my_booking.html', context)
 
 
@@ -75,6 +77,7 @@ class BookingEdit(LoginRequiredMixin, generic.UpdateView):
     template_name = 'edit_booking.html'
     success_url = '/my_booking/'
 
+   
  
 
 # This class will allow for the user to delete their booking and be redirected to my_booking page
