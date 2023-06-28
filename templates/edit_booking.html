@@ -5,20 +5,20 @@
 <!--user can edit their bookings made-->
 <section class="booking-table">
     <h5>{{ user.username }} Edit Your Booking Here: </h5>
-<div class="booking-container">
-    <div class="row">
-    <div class="col-md-3 mt-5 offset-md-3">
-    <form method="POST"> 
-        {% csrf_token %}
-        {{ form.as_p }}
-    <input type="submit" value="Confirm Changes" class="btn btn-success">
-     <a href="{% url 'my_booking' %}" button type="submit" class="btn btn-dark">Back To My Bookings</a>
-    </form> 
-   
-</div> 
-</div>
-</div>
-</section> 
+    <div class="booking-container">
+        <div class="row">
+            <div class="col-md-3 mt-5 offset-md-3">
+                <form method="POST">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <input type="submit" value="Confirm Changes" class="btn btn-success">
+                    <a href="{% url 'my_booking' %}" button type="submit" class="btn btn-dark">Back To My Bookings</a>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</section>
 
 
-{%endblock%} 
+{%endblock%}

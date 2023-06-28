@@ -5,22 +5,22 @@
 <!--delete booking section-->
 <section class="">
     <h5>Wait {{ user.username }}, Are You Sure You Want To Delete Your Booking ? </h5>
-<div class="booking-container">
-    <div class="row">
-    <div class="col-md-3 mt-5 offset-md-3">
-    <form method="POST">
-        {% csrf_token %}
-    <div class="bookingbutton">
-    <input type="submit" value="Confirm Booking Delete" class="btn btn-danger">
+    <div class="booking-container">
+        <div class="row">
+            <div class="col-md-3 mt-5 offset-md-3">
+                <form method="POST">
+                    {% csrf_token %}
+                    <div class="bookingbutton">
+                        <input type="submit" value="Confirm Booking Delete" class="btn btn-danger">
+                    </div>
+                </form>
+
+                <a href="{% url 'home' %}" class="btn btn-dark ">Back To Home</a>
+
+            </div>
+        </div>
     </div>
-    </form>
-    
- <a href="{% url 'home' %}" class="btn btn-dark ">Back To Home</a>
-   
-</div> 
-</div>
-</div>
-</div>
+    </div>
 </section>
 
-{%endblock%} 
+{%endblock%}

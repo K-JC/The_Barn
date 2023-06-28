@@ -1,17 +1,17 @@
-{% extends "base.html" %} 
+{% extends "base.html" %}
 
 {% block content %}
 <!--Make booking page, authenticated user can make a booking otherwise will need to signup/signin-->
 {% if not user.is_authenticated %}
 <section id="make-booking" class="booking-table">
-<div class="container">
-  <div class="row">
-      <div class="col-md-8 mt-3 offset-md-2">
-<h3>Sign up is required</h3>
-<p>Welcome to The Barn Restaurant.
-To book a table please sign in <a href="{% url 'account_login' %}"> sign in here</a></p>
-</div>
-</div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 mt-3 offset-md-2">
+                <h3>Sign up is required</h3>
+                <p>Welcome to The Barn Restaurant.
+                    To book a table please sign in <a href="{% url 'account_login' %}"> sign in here</a></p>
+            </div>
+        </div>
 </section>
 {% else %}
 
@@ -20,18 +20,18 @@ To book a table please sign in <a href="{% url 'account_login' %}"> sign in here
 <!--make a booking section-->
 <section id="make_booking">
     <h5>Enter Your Details Here: </h5>
-<div class="booking-container">
-    <div class="row">
-    <div class="col-md-8 mt-3 offset-md-2">
-    <form method="POST">
-        {% csrf_token %}
-        {{ form.as_p }}
+    <div class="booking-container">
+        <div class="row">
+            <div class="col-md-8 mt-3 offset-md-2">
+                <form method="POST">
+                    {% csrf_token %}
+                    {{ form.as_p }}
 
-        <button id="submit-button" class="btn btn-success" href="{% url 'thankyou' %}">Book Now</button>
-    </form>
-</div> 
-</div>
-</div>
+                    <button id="submit-button" class="btn btn-success" href="{% url 'thankyou' %}">Book Now</button>
+                </form>
+            </div>
+        </div>
+    </div>
 </section>
 
 {% endif %}

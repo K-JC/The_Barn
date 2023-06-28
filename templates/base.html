@@ -1,5 +1,4 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,7 +20,8 @@
     <link rel="icon" href="{% static 'favicon.ico' %}">
     <!--import google fonts-->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
-    <link href="//cdn.bootcss.com/bootstrap-datetimepicker/4.17.44/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+    <link href="//cdn.bootcss.com/bootstrap-datetimepicker/4.17.44/css/bootstrap-datetimepicker.min.css"
+        rel="stylesheet">
 </head>
 
 <body class="d-flex flex-column h-100">
@@ -31,51 +31,51 @@
     <nav class="navbar">
         <a id="barn-logo" href="{% url 'home' %}">The Barn Restaurant</a>
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse"
-        data-target="#navbarSupportedContent41" aria-controls="navbarSupportedContent41" aria-expanded="false"
-        aria-label="Toggle navigation"><span class="white-text"><i class="fas fa-bars fa-1x"></i></span></button>
-    
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent41"
+            aria-controls="navbarSupportedContent41" aria-expanded="false" aria-label="Toggle navigation"><span
+                class="white-text"><i class="fas fa-bars fa-1x"></i></span></button>
+
         <!--navagation home/menu/booking/login/signup/-->
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent41">
-        <ul class="navbar-nav">
-            <li class="nav-item active nav-options">
-                <br>
-                <br>
-                <a class="nav-links" href="{% url 'home' %}">Home</a>
-            </li>
-            {% if user.is_authenticated %}
-            <!--If user is authenticated they will see the below navagation links-->
-            <li class="nav-options">
-                <a class="nav-links" href="{% url 'make_booking' %}">Book A Table</a>
-            </li>
-            <li class="nav-options">
-                <a class="nav-links" href="{% url 'my_booking' %}">My Bookings</a>
-            </li>
-            <li class="nav-options">
-                <a class="nav-links" href="{% url 'menu' %}">Menu</a>
-            </li>
-            <li class="nav-item">
-            <a class="nav-links" href="{% url 'account_logout' %}">Logout</a>
-            </li>
-            {% else %}
-            <!--If user is not authenticated the will need to sign up first before they are allowed to make bookings-->
-            <li class="nav-item">
-                <a class="nav-links" href="{% url 'account_signup' %}">Sign Up</a>
-            </li>
-            <li class="nav-options">
-                <a class="nav-links" href="{% url 'menu' %}">Menu</a>
-            </li>
-            <li class="nav-options">
-                <a class="nav-links" href="{% url 'make_booking' %}">Book A Table</a>
-            </li>
-            <li class="nav-options">
-                <a class="nav-links" href="{% url 'account_login' %}">Sign in</a>
-            </li>
-            {% endif %}
-        </ul>
-    </div>
-</nav>
+            <ul class="navbar-nav">
+                <li class="nav-item active nav-options">
+                    <br>
+                    <br>
+                    <a class="nav-links" href="{% url 'home' %}">Home</a>
+                </li>
+                {% if user.is_authenticated %}
+                <!--If user is authenticated they will see the below navagation links-->
+                <li class="nav-options">
+                    <a class="nav-links" href="{% url 'make_booking' %}">Book A Table</a>
+                </li>
+                <li class="nav-options">
+                    <a class="nav-links" href="{% url 'my_booking' %}">My Bookings</a>
+                </li>
+                <li class="nav-options">
+                    <a class="nav-links" href="{% url 'menu' %}">Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-links" href="{% url 'account_logout' %}">Logout</a>
+                </li>
+                {% else %}
+                <!--If user is not authenticated the will need to sign up first before they are allowed to make bookings-->
+                <li class="nav-item">
+                    <a class="nav-links" href="{% url 'account_signup' %}">Sign Up</a>
+                </li>
+                <li class="nav-options">
+                    <a class="nav-links" href="{% url 'menu' %}">Menu</a>
+                </li>
+                <li class="nav-options">
+                    <a class="nav-links" href="{% url 'make_booking' %}">Book A Table</a>
+                </li>
+                <li class="nav-options">
+                    <a class="nav-links" href="{% url 'account_login' %}">Sign in</a>
+                </li>
+                {% endif %}
+            </ul>
+        </div>
+    </nav>
     <main>
         {% block content %}
         <!-- Content Goes here-->

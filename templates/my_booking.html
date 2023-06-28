@@ -1,43 +1,45 @@
-{% extends "base.html" %} 
+{% extends "base.html" %}
 
-{% block content %} 
+{% block content %}
 
 <!--section where user will see all the bookings they have made, with the option to edit or delete them-->
 <section id="user-booking">
 
-    <h5>{{ user.username }}, Here Are Your Bookings </h5> 
+    <h5>{{ user.username }}, Here Are Your Bookings </h5>
 
-<div class="container">
-    <div class="row">
-    <div class="col-md-8 mt-3 offset-md-2">
-        {% for booking in bookings %}
-        
-        <div class="border border-dark">
-        <p>Number of guests: {{ booking.guest }}</p>
-        <p>Date: {{ booking.day }}</p>
-        <p>Time: {{ booking.time }}</p>
-        <p>First Name: {{ booking.first_name }}</p>
-        <p>Last Name: {{ booking.last_name }}</p>
-        <p>Email: {{ booking.email }}</p>
-    
-        <div>
-        <a href="{% url 'edit_booking' booking.id %}" button type="submit" class="btn btn-success" align="right">Edit Booking</a>
-        <a href="{% url 'delete_booking' booking.id %}" button type="submit" class="btn btn-danger">Delete Booking</a>
-       </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 mt-3 offset-md-2">
+                {% for booking in bookings %}
+
+                <div class="border border-dark">
+                    <p>Number of guests: {{ booking.guest }}</p>
+                    <p>Date: {{ booking.day }}</p>
+                    <p>Time: {{ booking.time }}</p>
+                    <p>First Name: {{ booking.first_name }}</p>
+                    <p>Last Name: {{ booking.last_name }}</p>
+                    <p>Email: {{ booking.email }}</p>
+
+                    <div>
+                        <a href="{% url 'edit_booking' booking.id %}" button type="submit" class="btn btn-success"
+                            align="right">Edit Booking</a>
+                        <a href="{% url 'delete_booking' booking.id %}" button type="submit"
+                            class="btn btn-danger">Delete Booking</a>
+                    </div>
+                </div>
+                {% empty %}
+                <!-- If no bookings have been made yet will show no bookings made yet-->
+                <p>No Bookings Made Yet</p>
+
+                {% endfor %}
+
+
+                <div class="bookingbutton">
+                    <a href="{% url 'home' %}" class="btn btn-dark">Back To HomePage</a>
+                </div>
+            </div>
         </div>
-        {% empty %}
-        <!-- If no bookings have been made yet will show no bookings made yet-->
-       <p>No Bookings Made Yet</p>
-        
-       {% endfor %}
-     
-
-<div class="bookingbutton">
-<a href="{% url 'home' %}" class="btn btn-dark">Back To HomePage</a>
-</div>
-</div>
-</div>
-</div>
+    </div>
 </section>
 
 
