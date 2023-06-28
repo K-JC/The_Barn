@@ -66,7 +66,7 @@ def ViewBooking(request):
         bookings = GuestBooking.objects.filter()
         context = {'bookings': bookings}
 
-    return render(request, 'my_booking.html', context)
+    return render(request, 'my_booking.html')
 
 
 """ This class will allow for the user to edit a booking and be redirected to my booking page
