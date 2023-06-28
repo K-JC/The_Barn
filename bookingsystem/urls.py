@@ -1,4 +1,7 @@
-# URLS for booking system
+""" This file contains all the
+URLs for the barns booking system
+"""
+
 from django.urls import path
 from . import views
 
@@ -20,4 +23,4 @@ urlpatterns = [
     path('<pk>/edit_booking/', views.BookingEdit.as_view(), name='edit_booking'),
     # Delete Booking url
     path('<pk>/delete_booking/', views.BookingDelete.as_view(), name='delete_booking'),
-] 
+]

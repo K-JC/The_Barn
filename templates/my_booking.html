@@ -2,7 +2,7 @@
 
 {% block content %} 
 
-<!--my booking section-->
+<!--section where user will see all the bookings they have made, with the option to edit or delete them-->
 <section id="user-booking">
 
     <h5>{{ user.username }}, Here Are Your Bookings </h5> 
@@ -10,8 +10,6 @@
 <div class="container">
     <div class="row">
     <div class="col-md-8 mt-3 offset-md-2">
-<!--booking in bookings-->
-
         {% for booking in bookings %}
         
         <div class="border border-dark">
@@ -28,7 +26,7 @@
        </div>
         </div>
         {% empty %}
-        <!-- If booking list is empty  -->
+        <!-- If no bookings have been made yet will show no bookings made yet-->
        <p>No Bookings Made Yet</p>
         
        {% endfor %}

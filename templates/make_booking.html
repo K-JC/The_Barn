@@ -1,7 +1,7 @@
 {% extends "base.html" %} 
 
 {% block content %}
-<!--User authorisation to make booking-->
+<!--Make booking page, authenticated user can make a booking otherwise will need to signup/signin-->
 {% if not user.is_authenticated %}
 <section id="make-booking" class="booking-table">
 <div class="container">

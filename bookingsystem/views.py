@@ -19,14 +19,14 @@ def get(self, request):
     return render(request, 'base.html')
 
 
-# class allowing menu page to be rendered
+# class renderes the menu page
 
 
 class Menu(generic.DetailView):
     def get(self, request):
         return render(request, 'menu.html')
 
-# class for the thank you page to be rendered
+# class renderes the thankyou page
 
 
 class Thankyou(generic.DetailView):
@@ -34,7 +34,9 @@ class Thankyou(generic.DetailView):
         return render(request, 'thankyou.html')
 
 
-# This class allows the registerd user the ability to create their booking
+""" This class allows the registerd user the ability to create their booking,
+will send the user to the thank you page once booking has been completed. Checks the
+information thats being entered is valid, then saves to database"""
 
 
 class MakeBooking(LoginRequiredMixin, generic.CreateView):
@@ -58,9 +60,7 @@ class MakeBooking(LoginRequiredMixin, generic.CreateView):
             return render(request, 'make_booking.html', context)
 
 
-# Viewing any bookings made via the my_booking page
- #id=request.user.id hides the booking for
-
+# The user can view any bookings they have made via the my_booking page, will be listed
 def ViewBooking(request):
     if request.user.is_authenticated:
         bookings = GuestBooking.objects.filter()
@@ -69,7 +69,10 @@ def ViewBooking(request):
     return render(request, 'my_booking.html', context)
 
 
-# This class will allow for the user to edit a booking and be redirected to my_booking page
+""" This class will allow for the user to edit a booking and be redirected to my booking page
+only feilds for how many guests, what day and what time can be changed, once valid information has
+been entered this is saved to the database"""
+
 
 class BookingEdit(LoginRequiredMixin, generic.UpdateView):
     model = GuestBooking
@@ -77,10 +80,8 @@ class BookingEdit(LoginRequiredMixin, generic.UpdateView):
     template_name = 'edit_booking.html'
     success_url = '/my_booking/'
 
-   
- 
+# The user can delete their booking, will be redirected to mybooking page
 
-# This class will allow for the user to delete their booking and be redirected to my_booking page
 
 class BookingDelete(LoginRequiredMixin, generic.DeleteView):
     model = GuestBooking

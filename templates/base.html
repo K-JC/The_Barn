@@ -45,6 +45,7 @@
                 <a class="nav-links" href="{% url 'home' %}">Home</a>
             </li>
             {% if user.is_authenticated %}
+            <!--If user is authenticated they will see the below navagation links-->
             <li class="nav-options">
                 <a class="nav-links" href="{% url 'make_booking' %}">Book A Table</a>
             </li>
@@ -58,6 +59,7 @@
             <a class="nav-links" href="{% url 'account_logout' %}">Logout</a>
             </li>
             {% else %}
+            <!--If user is not authenticated the will need to sign up first before they are allowed to make bookings-->
             <li class="nav-item">
                 <a class="nav-links" href="{% url 'account_signup' %}">Sign Up</a>
             </li>
