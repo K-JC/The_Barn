@@ -41,19 +41,28 @@ The link to the live site can be found here, enjoy! - [The Barn]() Enjoy!
 
 ## Surface
 * I wanted this to look visually pleasing and not overwhelm the user. By using a combination of black and goldy yellow. Google fonts of Playfair Display and a back up of sans-serif. 
+* A user would visit the website, and see the logo to the left hand side with the restaurant name to the right would be a navigation drop down bar This would then drop down to reveal navigation such as log in/log out and make booking.
 
 # Wireframe
-* I created some wireframes using Figma, this is how I visioned the website.
-![Figma-Screenshot1](static/css/images/)
-![Figma-Screenshot2](static/css/images/)
-![Figma-Screenshot3](static/css/images/)
-![Figma-Screenshot4](static/css/images/)
+* Once I had an idea of what the user would need, I could then begin to figure out what the website would look like. 
+* I created some wireframes using Figma, this is how I visioned the home page of the website to look and the rest of the pages to keep the same visuals.
+* How I planned the website to look like was to have gold like text againts a black background. Then some white background with black text for where the resturant description and imagry would go.
+* Images relating to the restaurant. A description about this fictional restaurant. Black navbar and footer. Hero image to fit the width of the page, this Will blend well with the navigation color scheme I was planning to go with.
+* Google fonts of Playfair Display and a back up of sans-serif I chose to use. 
+* Remembering to center the text and imagery as this project was a mobile first design. 
+* Would like to add a favicon to make the website more realistic. Collapsible navagation to access hidden pages. 
+* Clean and clearly laid out information. Visually pleasing. Clearly labeled buttons to assist with navigating the website, for example booking button to take the user to the booking page. 
+* Social media links will make this a more realistic site and a PDF download menu will make this look a more authentic resturant website experience.
 
 
+![Figma-Screenshot1](static/css/images/figma-screenshot1.png)
 
-
+* I created a rough guide of how I would like the booking pages to look, I wanted to create a form so that the user can input the information you would with any other resturant booking site, like their first and last name, how many people the table is for etc. There needed to be a clearly labeled button to direct the user to edit or delete pages. 
+![Figma-Screenshot2](static/css/images/figma-screenshot2.png)
+![Figma-Screenshot3](static/css/images/figma-screenshot3.png)
 
 # User Storys 
+![User Storys](static/css/images/user-storys.png)
 
 # Features
 

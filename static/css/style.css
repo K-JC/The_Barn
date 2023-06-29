@@ -132,12 +132,12 @@ footer {
     color: white;
 }
 
-#submit-button{
+#submit-button {
     text-align: center;
 }
 
 /*Thank you image */
-.thankyou-image{
+.thankyou-image {
 background: url('https://res.cloudinary.com/dugjc92qc/image/upload/v1687592603/restaurant_table_xfcww3.jpg');
 background-position: center;
 background-repeat: no-repeat;
@@ -179,7 +179,7 @@ margin-bottom: 40px;
 }
 
 /*menu image*/
-#menu-image{
+#menu-image {
     background: url('https://res.cloudinary.com/dugjc92qc/image/upload/v1687592603/restaurant_table_xfcww3.jpg');
     background-position: center;
     background-repeat: no-repeat;
@@ -188,7 +188,8 @@ margin-bottom: 40px;
     min-height: 330px;
     max-width: 100%;
     }
-.menu-container-1{
+
+.menu-container-1 {
     padding-top: 70px;
   
 }
@@ -197,8 +198,6 @@ margin-bottom: 40px;
     padding-bottom: 10px;
 }    
 
-
-  
 /*media querys*/
 /*Large screen sizes with max width of 1300px*/
 
@@ -216,14 +215,13 @@ margin-bottom: 40px;
     p {
         font-size: 18px;
     }
-    #make_booking, h5{
+    #make_booking, h5 {
         right: 10px;
         text-align: center;
         margin-top: 20px;
         margin-bottom: 20px;
     }
 }
-
 
 /*Medium screen with a min screen width of 768px*/
 
