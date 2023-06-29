@@ -1,6 +1,6 @@
 #  The Barn
 For my fourth project, I needed to build a full stack website. I chose to make a restaurant booking system.
-The Barn Restaurant is a fictional restaurant and not a real one. A user can come to this website to view The Barn's menu, they can sign up/sign in to an account where they can make,edit and delete any bookings made.
+The Barn Restaurant is a fictional restaurant. A user can come to this website to view The Barn's menu, they can sign up/sign in to an account where they can make,edit and delete any bookings made.
 
 The link to the live site can be found here, enjoy! - [The Barn](https://the-barn.herokuapp.com/) Enjoy!
 
@@ -47,7 +47,7 @@ The link to the live site can be found here, enjoy! - [The Barn](https://the-bar
 * Once I had an idea of what the user would need, I could then begin to figure out what the website would look like. 
 * I created some wireframes using Figma, this is how I envisioned the homepage of the website to look and the rest of the pages to keep the same visuals.
 * How I planned the website to look like was to have gold like text against a black background. Then some white background with black text for where the restaurant description and imagery would go.
-* Images relating to the restaurant. A description about this fictional restaurant. Black navbar and footer. Hero image to fit the width of the page, this Will blend well with the navigation color scheme I was planning to go with.
+* Images relating to the restaurant. A description about this fictional restaurant. Black navbar and footer. Hero image to fit the width of the page, this will blend well with the navigation color scheme I was planning to go with.
 * Google fonts of Playfair Display and a back up of sans-serif I chose to use. 
 * Remembering to center the text and imagery as this project was a mobile first design. 
 * Would like to add a favicon to make the website more realistic. Collapsible navigation to access hidden pages. 
@@ -63,7 +63,7 @@ The link to the live site can be found here, enjoy! - [The Barn](https://the-bar
 
 # User Stories 
 ![User Stories](static/css/images/user-storys.png)
-* From the development plane and wire frame I got a good idea of what user stories I create.
+* From the development plane and wireframe I got a good idea of what user stories I create.
 * I created a GitHub project called The Barn User Stories and connected this to my project repository. The user stories are as follows.
 * As a new user I can create a log in so that I can book/edit/cancel my booking
 * As a new user I can download restaurant menu so that I can view the food options on my phone now or at a later date
