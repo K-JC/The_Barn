@@ -56,10 +56,10 @@ The link to the live site can be found here, enjoy! - [The Barn]() Enjoy!
 
 
 ![Figma-Screenshot1](static/css/images/figma-screenshot1.png)
-
-* I created a rough guide of how I would like the booking pages to look, I wanted to create a form so that the user can input the information you would with any other resturant booking site, like their first and last name, how many people the table is for etc. There needed to be a clearly labeled button to direct the user to edit or delete pages. 
 ![Figma-Screenshot2](static/css/images/figma-screenshot2.png)
 ![Figma-Screenshot3](static/css/images/figma-screenshot3.png)
+
+* I created a rough guide of how I would like the booking pages to look, I wanted to create a form so that the user can input the information you would with any other resturant booking site, like their first and last name, how many people the table is for etc. There needed to be a clearly labeled button to direct the user to edit or delete pages. 
 
 # User Stories 
 ![User Stories](static/css/images/user-storys.png)
@@ -81,11 +81,17 @@ The link to the live site can be found here, enjoy! - [The Barn]() Enjoy!
 * As a site admin I can log in with admin privileges so that view bookings that have been made
 
 # Features
-* Navagation Bar - 
-* Footer -
-* Home Page - 
-* Menu Page - 
-* Make A Booking Page -
+
+![Home](static/css/images/home.png)
+* The home pages collapsabe navagation bar drops down to reveal the other pages for the site. The nav bar located at the top of the page and footer located at the bottom of the page are identical in background colour and text colour tieing them nicely together.
+The user has the option to either click on the book now button to take them to the booking page or they can use the collapsible nav bar which will reveal a book a table link. Both of these options require the user to either sign in or sign up and the user will be redirected to these pages. So if they haven't signed in they will need to first then they can access these other pages. The user can click on the barn resturant logo on any page to be redirected back to the home page. All pages are consistant with the same nav bar and footer styling. The home page also consists of relevant resturant imagery, description of the resturant and opening times too. 
+
+![Menu](static/css/images/menu-page.png)
+![Menu PDF](static/css/images/menu-open.png)
+* When the user vists the menu page they will see a link to download a PDF version of the menu for The Barn. The PDF has been styled accordingly to keep consistant of that of a resturant. So a user can download this, it will open up in a new tab and they can view it there and then or later.
+
+![Booking](static/css/images/make-booking.png)
+* The proccess of how to make a booking is as follows, a user (onced logged in) can click the link to book a table this will take them to the book a table page. The can input their details for their chosen date and time. Once completed and clicked book now the user will then be redirected to thank you page, this will have a button that will take the user to the my booking page where they can view their booking. On this page they can also edit or delete their booking. The page has a edit and delete button but also a back to home page button.
  
 # Bugs
 ## Solved
@@ -130,7 +136,14 @@ I had also forgotten to add django.contrib.sites to my settings.py file.
 
 
 ## Python Testing
-For testing I had to comment out my database code and use the database code provided when creating my project. Once tests were completed I commented out this code and made sure my own code was not commented out.
+For testing I had to comment out my database code and use the database code provided when creating my project. Once tests were completed I commented out this code and made sure my own code was not commented out. I tested some of the views.
+![Python Test 1](static/css/images/test-homepage.png)
+![Python Test 2](static/css/images/test-menu.png)
+![Python Test 3](static/css/images/test-thankyou.png)
+![Python Test 4](static/css/images/test-my-booking.png)
+![Python Test 5](static/css//images/test-user.png)
+
+
 
 # Technologys Used
 ## Frameworks, Libraries, Programs & Applications Used
