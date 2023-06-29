@@ -12,6 +12,7 @@
                     To book a table please sign in <a href="{% url 'account_login' %}"> sign in here</a></p>
             </div>
         </div>
+    </div>
 </section>
 {% else %}
 
@@ -26,8 +27,8 @@
                 <form method="POST">
                     {% csrf_token %}
                     {{ form.as_p }}
-
-                    <button id="submit-button" class="btn btn-success" href="{% url 'thankyou' %}">Book Now</button>
+                    <input type="submit" value="Book Now" class="btn btn-success">
+                    <a href="{% url 'thankyou' %}"></a>
                 </form>
             </div>
         </div>

@@ -21,10 +21,9 @@
                     <p>Email: {{ booking.email }}</p>
 
                     <div>
-                        <a href="{% url 'edit_booking' booking.id %}" button type="submit" class="btn btn-success">Edit
+                        <a href="{% url 'edit_booking' booking.id %}" class="btn btn-success">Edit
                             Booking</a>
-                        <a href="{% url 'delete_booking' booking.id %}" button type="submit"
-                            class="btn btn-danger">Delete Booking</a>
+                        <a href="{% url 'delete_booking' booking.id %}" class="btn btn-danger">Delete Booking</a>
                     </div>
                 </div>
                 {% empty %}
