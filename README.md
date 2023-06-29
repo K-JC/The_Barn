@@ -2,7 +2,7 @@
 For my fourth project, I needed to build a full stack website. I chose to make a restaurant booking system.
 The Barn Restaurant is a fictional restaurant and not a real one. A user can come to this website to view The Barn's menu, they can sign up/sign in to an account where they can make,edit and delete any bookings made.
 
-The link to the live site can be found here, enjoy! - [The Barn]() Enjoy!
+The link to the live site can be found here, enjoy! - [The Barn](https://the-barn.herokuapp.com/) Enjoy!
 ![Responsive]()
 
 ## Table of Contents  
