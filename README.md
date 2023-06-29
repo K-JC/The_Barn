@@ -63,8 +63,9 @@ I had also forgotten to add django.contrib.sites to my settings.py file.
 
 # Testing
 ## Manual Testing 
-* 
-# Technologys Uses
+* Through development of the project in GitPod. All buttons take me to the correct place, all font awesome links take me to the correct social media sites. Booking form works correctly and the chosen fields for the edit booking page work correctly. On the live deployed site on Heroku the website works as expected.
+
+# Technologys Used
 ## Frameworks, Libraries, Programs & Applications Used
 * Django
 * PostgreSQL
@@ -76,6 +77,7 @@ I had also forgotten to add django.contrib.sites to my settings.py file.
 * GitPod - Gitpod was used for writing my code and when I pushed commits from Gitpod they were uploaded to Github where my project was stored.
 * Heroku - Where the project was deployed to.
 * Google Development Tool - Where I checked the responsiveness of the website and edit any code without the risk of making it a permanent change.
+* Elephantsql - I used Elephantsql for my database.
 
 ## Languages
 * HTML
@@ -89,8 +91,13 @@ I had also forgotten to add django.contrib.sites to my settings.py file.
 ![LightHouse](static/css/images/lighthouse-score.png)
 
 # Deployment
-
-
+* Steps to deploy on Heroku, I push any unsaved changes from my work to GitHub.
+* From Heroku I click create new app, I then named “the-barn”, I selected my region and then clicked create app.
+* Once the page loaded, I went into the settings tab, I went to the config vars section and entered PORT to the key and 8000 to the value (this was added because the mock terminal may fail and the project will not work if not entered). I entered my cloudinary url and then my database url from ElephantSQL. I entered my secret key information into the config vars. 
+* I then scrolled down to the build packs section, I clicked add build pack and selected python then clicked saved changes. I then clicked back on the build pack and selected node.js then clicked saved changes again. I made sure that Python was first and then node.js.
+* Next, I went to the deployment section and selected my deployment method which is GitHub. I confirmed that I wanted to connect to GitHub. I searched for my repository name which is "the-barn”. I selected this and then connected to link the Heroku app to my repository code.
+* I then scrolled down and clicked deploy branch from the deploy a GitHub branch (this showed me the logs being run as my project was being deployed).
+* Once completed I then clicked on view to view my deployed project on the terminal. It is loaded with no errors. I then tested my project making sure everything was working as it should and it was.
 
 
 # Credits
