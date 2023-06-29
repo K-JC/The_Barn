@@ -117,7 +117,7 @@ I had also forgotten to add django.contrib.sites to my settings.py file.
 * The favicon wasn’t loading to the website after going over the code. It was because I had used an incorrect file path in the static folder. Once corrected the favicon was showing. 
 
 ## Unsolved Bugs
-* When logged in as Teresa I made a booking. I logged out and signed up as a new user Luke. I went to make a booking for Luke and this worked as expected but what was not expected was that Teresa’s booking was also showing up. I have been unable to find a way to fix this bug with the time I had left which was disappointing.
+* When logged in as new user 'Teresa' I made a booking. I logged out and signed up as a new user 'Luke'. I went to make a booking for Luke and this worked as expected but what was not expected was that Teresa’s booking was also showing up. I have been unable to find a way to fix this bug with the time I had left which was disappointing.
 
 # Future Features
 * I would like to add the use of messages, so that when a user edits or deletes their booking a message would come up and disappear after 4 seconds which would say “your booking has been edited” and “your booking has been deleted”.
@@ -125,8 +125,8 @@ I had also forgotten to add django.contrib.sites to my settings.py file.
 * I would like to add a confirmation email once a user has booked with the restaurant.
 
 # Validator Testing
-* HTML - No errors found, passed on W3C HTML Validator
-* CSS - No errors found, passed on W3C CSS Validator
+* HTML - One error regarding the position of one of the scripts in the base.html page, one I fixed this there were no errors found, passed on W3C HTML Validator.
+* CSS - No errors found, passed on W3C CSS Validator.
 * PEP8 Python Validator - The only error that came up was that my line of code was too long. 
 ![PEP8](static/css/images/pep-screenshot.png)
 
