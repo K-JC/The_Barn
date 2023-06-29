@@ -7,7 +7,7 @@ The link to the live site can be found here, enjoy! - [The Barn]() Enjoy!
 ## Table of Contents  
 * [Development Plane](#development-plane)
 * [WireFrame](#wireframe)
-* [User Storys](#user-storys)
+* [User Stories](#user-stories)
 * [Features](#features)  
 * [Testing](#testing)
 * [Bugs](#bugs)
@@ -61,8 +61,24 @@ The link to the live site can be found here, enjoy! - [The Barn]() Enjoy!
 ![Figma-Screenshot2](static/css/images/figma-screenshot2.png)
 ![Figma-Screenshot3](static/css/images/figma-screenshot3.png)
 
-# User Storys 
-![User Storys](static/css/images/user-storys.png)
+# User Stories 
+![User Stories](static/css/images/user-storys.png)
+* From the development plane and wire frame I got a good idea of what user stories I create.
+* I created a GitHub project called The Barn User Stories and connected this to my project repository. The user stories are as follows.
+* As a new user I can create a log in so that I can book/edit/cancel my booking
+* As a new user I can download restaurant menu so that I can view the food options on my phone now or at a later date
+* As a returning user I can download restaurant menu so that I can view the menu options in case they have changed
+* As a new user I can book a table so that I can eat at this restaurant at a certain time/day
+* As a returning user I can book a table so that I can eat at this restaurant at a certain time/day
+* As a new user I can edit my booking so that I can change the time/day I eat at the restaurant or how many people are attending
+* As a returning user I can edit my booking so that I can change the time/day I eat at the restaurant or how many people are attending
+* As a new user I can cancel my booking so that the restaurant knows I will no longer need the table
+* As a returning user I can cancel my booking so that the restaurant knows I will no longer need the table
+* As a returning user I can log in so that I can book/edit/cancel a booking
+* As a returning user I can log out so that I can log out of my booking account
+* As a new user I can log out so that I can log out of my booking account
+* As a site admin I can view all bookings made so that I can view them/edit them or cancel them if a customer rings up to change their booking
+* As a site admin I can log in with admin privileges so that view bookings that have been made
 
 # Features
 
