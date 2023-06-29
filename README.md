@@ -190,7 +190,7 @@ For testing I had to comment out my database code and use the database code prov
 * I then scrolled down to the build packs section, I clicked add build pack and selected python then clicked saved changes. I then clicked back on the build pack and selected node.js then clicked saved changes again. I made sure that Python was first and then node.js.
 * Next, I went to the deployment section and selected my deployment method which is GitHub. I confirmed that I wanted to connect to GitHub. I searched for my repository name which is "the-barn”. I selected this and then connected to link the Heroku app to my repository code.
 * I then scrolled down and clicked deploy branch from the deploy a GitHub branch (this showed me the logs being run as my project was being deployed).
-* Once completed I then clicked on view to view my deployed project on the terminal. It is loaded with no errors. I then tested my project making sure everything was working as it should and it was.
+* Once completed I then clicked on view to view my deployed project on the terminal. I had one issue arise and that was static files were not loading, after leaving in the disabled collectstatic heroku deployed with no errors and the css styling was visible. It was loaded with no errors this time. I then tested my project making sure everything was working as it should and it was.
 
 
 # Credits
