@@ -81,7 +81,12 @@ The link to the live site can be found here, enjoy! - [The Barn]() Enjoy!
 * As a site admin I can log in with admin privileges so that view bookings that have been made
 
 # Features
-
+* Navagation Bar - 
+* Footer -
+* Home Page - 
+* Menu Page - 
+* Make A Booking Page -
+ 
 # Bugs
 ## Solved
 * When loading up my page to see if my superuser admin had been done correctly It came up with an error telling me that cloudinary-storage had no model. So when scrolling through my settings I noted that both static and media I had used a CAPITAL C instead of lower case c for cloudinary storage. Once I changed this and reloaded my browser the Django admin page loaded fine. 
@@ -173,8 +178,4 @@ For testing I had to comment out my database code and use the database code prov
 Code content inspired and altered for use of creating my model so i can use date and times choices.
 * Stack Overflow[Stack Overflow](https://stackoverflow.com/questions/71812428/django-how-can-i-create-a-user-view-that-allows-a-user-to-amend-or-delete-their). Stack Overflow posts that helped me understand how to use views for my project, with some code altered for my project.
 * W3schools-[W3Schools](https://www.w3schools.com/bootstrap4/bootstrap_navbar.asp). For helping me to understand how to use collapsible navagation and how it is implemente in code.
-
-Code Institue Walkthough Projects that also contributed to the creation of my project: 
--Think Before I Blog Walkthrough
--Django Walkthrough
--Bootstrap Walkthrough for Downloading PDF
+* Code Institue Walkthough Projects that also contributed to the creation of my project: I Think Therefore I Blog Walkthrough, Hello Django Walkthrough and Bootstrap Resume Walkthrough for Downloading PDF.
