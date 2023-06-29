@@ -5,6 +5,9 @@ The link to the live site can be found here, enjoy! - [The Barn]() Enjoy!
 ![Responsive]()
 
 ## Table of Contents  
+* [Development Plane](#development-plane)
+* [WireFrame](#wireframe)
+* [User Storys](#user-storys)
 * [Features](#features)  
 * [Testing](#testing)
 * [Bugs](#bugs)
@@ -13,18 +16,23 @@ The link to the live site can be found here, enjoy! - [The Barn]() Enjoy!
 * [Credits](#credits)
 
 
-# User Storys 
 # Development Plane
-. Stratagy
-. Scope
-. Structure
-. Skeleton
-. Surface
-. Wireframe
+## Stratagy
+## Scope
+## Structure
+## Skeleton
+## Surface
+##  Wireframe
 
- 
+
+
+# Wireframe
+
+
+# User Storys 
+
 # Features
-# Testing
+
 # Bugs
 ## Solved
 * When loading up my page to see if my superuser admin had been done correctly It came up with an error telling me that cloudinary-storage had no model. So when scrolling through my settings I noted that both static and media I had used a CAPITAL C instead of lower case c for cloudinary storage. Once I changed this and reloaded my browser the Django admin page loaded fine. 
@@ -101,3 +109,7 @@ I had also forgotten to add django.contrib.sites to my settings.py file.
 
 
 # Credits
+## Media 
+* All images used are from Pexels, I used Tiny PNG to compress images down and then used Cloudinary as my storage for them.[Pexels](https://www.pexels.com/)
+* All icons used for my social media links are from FontAwesome.-[FontAwesome](https://fontawesome.com/)
+
