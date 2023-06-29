@@ -162,3 +162,9 @@ I had also forgotten to add django.contrib.sites to my settings.py file.
 * All images used are from Pexels, I used Tiny PNG to compress images down and then used Cloudinary as my storage for them.[Pexels](https://www.pexels.com/)
 * All icons used for my social media links are from FontAwesome.-[FontAwesome](https://fontawesome.com/)
 
+## Content 
+-GeekforGeek
+-DevGenuis
+-Think Before I Blog Walkthrough
+-Django Walkthrough
+-Bootstrap Walkthrough for Downloading PDF
