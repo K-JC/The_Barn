@@ -92,7 +92,10 @@ The user has the option to either click on the book now button to take them to t
 
 ![Booking](static/css/images/make-booking.png)
 * The proccess of how to make a booking is as follows, a user (onced logged in) can click the link to book a table this will take them to the book a table page. The can input their details for their chosen date and time. Once completed and clicked book now the user will then be redirected to thank you page, this will have a button that will take the user to the my booking page where they can view their booking. On this page they can also edit or delete their booking. The page has a edit and delete button but also a back to home page button.
- 
+
+![Super User](static/css/images/barn-adminview.png)
+* The barn admin view so that the resrutant has the ability to view bookings made from customers. They also have the ability to make,edit or delete any bookings.
+
 # Bugs
 ## Solved
 * When loading up my page to see if my superuser admin had been done correctly It came up with an error telling me that cloudinary-storage had no model. So when scrolling through my settings I noted that both static and media I had used a CAPITAL C instead of lower case c for cloudinary storage. Once I changed this and reloaded my browser the Django admin page loaded fine. 
@@ -132,7 +135,17 @@ I had also forgotten to add django.contrib.sites to my settings.py file.
 # Testing
 ## Manual Testing 
 * Through development of the project in GitPod. All buttons take me to the correct place, all font awesome links take me to the correct social media sites. Booking form works correctly and the chosen fields for the edit booking page work correctly. On the live deployed site on Heroku the website works as expected.
-
+* The book button on the home page takes the user to a page where they can input their chosen data for the booking they want, once they have completed this they click on book now, this will take the user to the thank you page where they can choose to click on the button that will take them to the my booking page or click the logo to go back to the homepage. If they click go back to my booking this will take them to a my booking page with their booking that they have just made. There are two buttons inside this booking one is edit and the other is delete, they now have the ability to edit or delete that chosen booking. If editing they only have a few feilds they can choose as having to retype name and email I found may interfere with user experience so minimalised this by choosing the most in demand for change. This was time, day and how many guests would be attending. Once completed the user can click on confirm changes, this will take them back to the my booking page with the updated changes to that booking. The delete button will take the user to the delete page for that choosen booking, there is a message for the user, are they sure they want to delete their booking. If they are sure they can confirm booking delete and they will be redirected back to the my booking page where their booking has now been deleted and is no longer there, the page will display that there are no bookings yet. Or if they have chananged their mind they can click on the back to home button.  The user was able to book, edit and delete their booking.
+* When clicking on the collapisible nav bar if a user was to click on the menu link this takes them to the menu page. If the user clicks on the link download our menu here a new tab will open with a PDF version of the menu. The menu opened as expected.
+* All social media links open to their designated social media platforms.
+* All buttons work and take the user to the correct pages. 
+* For this test user I created a made up email and name.
+![Sign in](static/css/images/sign-in.png)
+![User Make Booking](static/css/images/user-make-booking.png)
+![User View Booking](static/css/images/user-my-booking.png)
+![User Edit Booking](static/css/images/user-edit-booking.png)
+![User Delete Booking](static/css/images/user-delete-booking.png)
+![User No Bookings](static/css/images/user-no-booking.png)
 
 
 ## Python Testing
