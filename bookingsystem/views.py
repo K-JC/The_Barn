@@ -69,7 +69,6 @@ def ViewBooking(request):
     return render(request, 'my_booking.html', context)
 
 
-
 """ This class will allow for the user to edit a booking and be redirected to my booking page
 only feilds for how many guests, what day and what time can be changed, once valid information has
 been entered this is saved to the database"""
