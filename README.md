@@ -18,15 +18,39 @@ The link to the live site can be found here, enjoy! - [The Barn]() Enjoy!
 
 # Development Plane
 ## Stratagy
+* I aim to achieve a restaurant booking system for users that will want to make a booking at this fictional restaurant 
+* When at the first stage of planning my project I put myself in the shoes of the user, I needed to understand what the users wants or needs for this website were. I noted down the following.
+* Why would the user come to this website in the first place? To find a restaurant, look at the menu, book a table, important information regarding opening hours and contact information for the restaurant.
+* The first thing they should see is what this website is about (a restaurant) and it should be very clear how to navigate.
+* What would make them come back after their first visit? To edit or delete their original booking. To make a new booking. Redownload a new menu.
+* If the experience of navigating was straightforward and easy to use. The website looks good. This should create a good user experience.
+
+
 ## Scope
+* The features I want to implement are the ability for a user to make a booking at the restaurant, but only once they have logged in. If a user doesn't have an account then they can't get to the booking page. Once logged in they have access to make a booking, view all their bookings, edit and delete their bookings. I would also like to have the menu as a PDF that the user can download. I would like to add styling to this so it's not just a plain document.
+
 ## Structure
+* Logically grouping the main home page so that additional pages are easy to navigate through a collapsible navagation icon. This will contain the make booking,my booking,sign in, sign up, menu pages. 
+* So the user will be able to navigate from the home page with ease. I aim to have most of the pages link back to the home page or to the booking page via buttons which are clear and easy to understand.
+
 ## Skeleton
+* Information presented in a clear way and avoiding any clutter. The user must have an easy navigation experience. The collapsible navigation bar will take the user from the home page to other pages. 
+* Only a logged in user will be able to make a booking,the user will be directed to a sign up/sign in page. Once a user is logged in they can access the make a booking page, and then from there the my booking page where they will have options to edit or delete a particular booking.
+* There will be an option for the user to log out of their account too. 
+* Information on the main home page will be all relevant to this restaurant, from the description to the imagery used. Social media links and opening times are some of the features that will be used. 
+
 ## Surface
-##  Wireframe
-
-
+* I wanted this to look visually pleasing and not overwhelm the user. By using a combination of black and goldy yellow. Google fonts of Playfair Display and a back up of sans-serif. 
 
 # Wireframe
+* I created some wireframes using Figma, this is how I visioned the website.
+![Figma-Screenshot1](static/css/images/)
+![Figma-Screenshot2](static/css/images/)
+![Figma-Screenshot3](static/css/images/)
+![Figma-Screenshot4](static/css/images/)
+
+
+
 
 
 # User Storys 
