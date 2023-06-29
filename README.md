@@ -122,6 +122,11 @@ I had also forgotten to add django.contrib.sites to my settings.py file.
 ## Manual Testing 
 * Through development of the project in GitPod. All buttons take me to the correct place, all font awesome links take me to the correct social media sites. Booking form works correctly and the chosen fields for the edit booking page work correctly. On the live deployed site on Heroku the website works as expected.
 
+
+
+## Python Testing
+For testing I had to comment out my database code and use the database code provided when creating my project. Once tests were completed I commented out this code and made sure my own code was not commented out.
+
 # Technologys Used
 ## Frameworks, Libraries, Programs & Applications Used
 * Django
@@ -163,8 +168,13 @@ I had also forgotten to add django.contrib.sites to my settings.py file.
 * All icons used for my social media links are from FontAwesome.-[FontAwesome](https://fontawesome.com/)
 
 ## Content 
--GeekforGeek
--DevGenuis
+* GeekforGeek-[GeekforGeek](https://www.geeksforgeeks.org/updateview-class-based-views-django/). Code content inspired and altered for the use of creating my class based views.
+* DevGenuis-[DevGenuis](https://blog.devgenius.io/django-tutorial-on-how-to-create-a-booking-system-for-a-health-clinic-9b1920fc2b78).
+Code content inspired and altered for use of creating my model so i can use date and times choices.
+* Stack Overflow[Stack Overflow](https://stackoverflow.com/questions/71812428/django-how-can-i-create-a-user-view-that-allows-a-user-to-amend-or-delete-their). Stack Overflow posts that helped me understand how to use views for my project, with some code altered for my project.
+* W3schools-[W3Schools](https://www.w3schools.com/bootstrap4/bootstrap_navbar.asp). For helping me to understand how to use collapsible navagation and how it is implemente in code.
+
+Code Institue Walkthough Projects that also contributed to the creation of my project: 
 -Think Before I Blog Walkthrough
 -Django Walkthrough
 -Bootstrap Walkthrough for Downloading PDF
