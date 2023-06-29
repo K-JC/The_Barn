@@ -1,11 +1,12 @@
 #  The Barn
-The Barn Restaurant is a fictional restaurant and not a real one. 
+For my fourth project, I needed to build a full stack website. I chose to make a restaurant booking system.
+The Barn Restaurant is a fictional restaurant and not a real one. A user can come to this website to view The Barn's menu, they can sign up/sign in to an account where they can make,edit and delete any bookings made.
 
 The link to the live site can be found here, enjoy! - [The Barn]() Enjoy!
 ![Responsive]()
 
 ## Table of Contents  
-* [Development Plane](#development-plane)
+* [Development Planes](#development-planes)
 * [WireFrame](#wireframe)
 * [User Stories](#user-stories)
 * [Features](#features)  
@@ -16,8 +17,8 @@ The link to the live site can be found here, enjoy! - [The Barn]() Enjoy!
 * [Credits](#credits)
 
 
-# Development Plane
-## Stratagy
+# Development Planes
+## Strategy
 * I aim to achieve a restaurant booking system for users that will want to make a booking at this fictional restaurant 
 * When at the first stage of planning my project I put myself in the shoes of the user, I needed to understand what the users wants or needs for this website were. I noted down the following.
 * Why would the user come to this website in the first place? To find a restaurant, look at the menu, book a table, important information regarding opening hours and contact information for the restaurant.
@@ -30,7 +31,7 @@ The link to the live site can be found here, enjoy! - [The Barn]() Enjoy!
 * The features I want to implement are the ability for a user to make a booking at the restaurant, but only once they have logged in. If a user doesn't have an account then they can't get to the booking page. Once logged in they have access to make a booking, view all their bookings, edit and delete their bookings. I would also like to have the menu as a PDF that the user can download. I would like to add styling to this so it's not just a plain document.
 
 ## Structure
-* Logically grouping the main home page so that additional pages are easy to navigate through a collapsible navagation icon. This will contain the make booking,my booking,sign in, sign up, menu pages. 
+* Logically grouping the main home page so that additional pages are easy to navigate through a collapsible navigation icon. This will contain the make booking,my booking,sign in, sign up, menu pages. 
 * So the user will be able to navigate from the home page with ease. I aim to have most of the pages link back to the home page or to the booking page via buttons which are clear and easy to understand.
 
 ## Skeleton
@@ -45,21 +46,21 @@ The link to the live site can be found here, enjoy! - [The Barn]() Enjoy!
 
 # Wireframe
 * Once I had an idea of what the user would need, I could then begin to figure out what the website would look like. 
-* I created some wireframes using Figma, this is how I visioned the home page of the website to look and the rest of the pages to keep the same visuals.
-* How I planned the website to look like was to have gold like text againts a black background. Then some white background with black text for where the resturant description and imagry would go.
+* I created some wireframes using Figma, this is how I envisioned the homepage of the website to look and the rest of the pages to keep the same visuals.
+* How I planned the website to look like was to have gold like text against a black background. Then some white background with black text for where the restaurant description and imagery would go.
 * Images relating to the restaurant. A description about this fictional restaurant. Black navbar and footer. Hero image to fit the width of the page, this Will blend well with the navigation color scheme I was planning to go with.
 * Google fonts of Playfair Display and a back up of sans-serif I chose to use. 
 * Remembering to center the text and imagery as this project was a mobile first design. 
-* Would like to add a favicon to make the website more realistic. Collapsible navagation to access hidden pages. 
+* Would like to add a favicon to make the website more realistic. Collapsible navigation to access hidden pages. 
 * Clean and clearly laid out information. Visually pleasing. Clearly labeled buttons to assist with navigating the website, for example booking button to take the user to the booking page. 
-* Social media links will make this a more realistic site and a PDF download menu will make this look a more authentic resturant website experience.
+* Social media links will make this a more realistic site and a PDF download menu will make this look a more authentic restaurant website experience.
 
 
 ![Figma-Screenshot1](static/css/images/figma-screenshot1.png)
 ![Figma-Screenshot2](static/css/images/figma-screenshot2.png)
 ![Figma-Screenshot3](static/css/images/figma-screenshot3.png)
 
-* I created a rough guide of how I would like the booking pages to look, I wanted to create a form so that the user can input the information you would with any other resturant booking site, like their first and last name, how many people the table is for etc. There needed to be a clearly labeled button to direct the user to edit or delete pages. 
+* I created a rough guide of how I would like the booking pages to look, I wanted to create a form so that the user can input the information you would with any other restaurant booking site, like their first and last name, how many people the table is for etc. There needed to be a clearly labeled button to direct the user to edit or delete pages. 
 
 # User Stories 
 ![User Stories](static/css/images/user-storys.png)
@@ -83,18 +84,18 @@ The link to the live site can be found here, enjoy! - [The Barn]() Enjoy!
 # Features
 
 ![Home](static/css/images/home.png)
-* The home pages collapsabe navagation bar drops down to reveal the other pages for the site. The nav bar located at the top of the page and footer located at the bottom of the page are identical in background colour and text colour tieing them nicely together.
-The user has the option to either click on the book now button to take them to the booking page or they can use the collapsible nav bar which will reveal a book a table link. Both of these options require the user to either sign in or sign up and the user will be redirected to these pages. So if they haven't signed in they will need to first then they can access these other pages. The user can click on the barn resturant logo on any page to be redirected back to the home page. All pages are consistant with the same nav bar and footer styling. The home page also consists of relevant resturant imagery, description of the resturant and opening times too. 
+* The home page's collapsible navigation bar drops down to reveal the other pages for the site. The nav bar located at the top of the page and footer located at the bottom of the page are identical in background color and text color tieing them nicely together.
+The user has the option to either click on the book now button to take them to the booking page or they can use the collapsible navbar which will reveal a book table link. Both of these options require the user to either sign in or sign up and the user will be redirected to these pages. So if they haven't signed in they will need to first then they can access these other pages. The user can click on the barn restaurant logo on any page to be redirected back to the home page. All pages are consistent with the same navbar and footer styling. The home page also consists of relevant restaurant imagery, description of the restaurant and opening times too. 
 
 ![Menu](static/css/images/menu-page.png)
 ![Menu PDF](static/css/images/menu-open.png)
-* When the user vists the menu page they will see a link to download a PDF version of the menu for The Barn. The PDF has been styled accordingly to keep consistant of that of a resturant. So a user can download this, it will open up in a new tab and they can view it there and then or later.
+* When the user visits the menu page they will see a link to download a PDF version of the menu for The Barn. The PDF has been styled accordingly to keep consistent with that of a restaurant. So a user can download this, it will open up in a new tab and they can view it there and then or later.
 
 ![Booking](static/css/images/make-booking.png)
-* The proccess of how to make a booking is as follows, a user (onced logged in) can click the link to book a table this will take them to the book a table page. The can input their details for their chosen date and time. Once completed and clicked book now the user will then be redirected to thank you page, this will have a button that will take the user to the my booking page where they can view their booking. On this page they can also edit or delete their booking. The page has a edit and delete button but also a back to home page button.
+* The process of how to make a booking is as follows, a user (once logged in) can click the link to book a table that will take them to the book a table page. They can input their details for their chosen date and time. Once completed and clicked the book , the user will then be redirected to the thank you page, this will have a button that will take the user to the my booking page where they can view their booking. On this page they can also edit or delete their booking. The page has an edit and delete button but also a back to home page button.
 
 ![Super User](static/css/images/barn-adminview.png)
-* The barn admin view so that the resrutant has the ability to view bookings made from customers. They also have the ability to make,edit or delete any bookings.
+* The barn admin view so that the restaurant has the ability to view bookings made from customers. They also have the ability to make,edit or delete any bookings.
 
 # Bugs
 ## Solved
@@ -111,10 +112,10 @@ I had also forgotten to add django.contrib.sites to my settings.py file.
 
 * Bookings once made not showing on the users my bookings page. I changed the class to a def and the  detail view for a request. I then defined bookings as I had not done this. once I had defined it so that the guest booking would show up in my booking page. I added {bookings in bookings} once I refreshed the page some of the information was showing. After some rejigging of my code, I noticed that  I had guests as bookings.guest and the other information was written up as just booking. I then changed the booking to bookings and once done, all the information on booking was now showing. A user can now view the bookings they make.
 
-* An error occurred with my path for thankyou page. I had not placed a ‘/’ at the end so once i had entered /’thankyou’/ the page loaded correctly.
+* An error occurred with my path for thankyou page. I had not placed a ‘/’ at the end so once I had entered /’thankyou’/ the page loaded correctly.
 
 
-* Another bug I came across was for my edit and delete bookings class, so that the user will be able to edit or delete a booking.I was receiving  an error message “Generic detail view BookingEdit must be called with either an object pk or a slug in the URLconf”. I placed a pk after the edit_booking and delete_booking url path in urls.py and a booking.id in my edit and delete urls in my my_booking page. Page wasn't able to load as couldn't find the path. I changed the position of the pk to infront of edit_booking and delete_booking. The pages both loaded fine and once clicked on the edit button this took me to the edit page. I tried the same for the delete page, this worked fine. Then I tested that on the edit page i could change that particular booking's details, changing the time and the date, once confirmed I was then taken back to the my_booking page and the booking had indeed been updated. Again I tested that on the delete page I could delete the chosen booking, once deleted was taken back to the my_booking page where the booking had been removed. 
+* Another bug I came across was for my edit and delete bookings class, so that the user will be able to edit or delete a booking.I was receiving  an error message “Generic detail view BookingEdit must be called with either an object pk or a slug in the URLconf”. I placed a pk after the edit_booking and delete_booking url path in urls.py and a booking.id in my edit and delete urls in my my_booking page. Page wasn't able to load as couldn't find the path. I changed the position of the pk to infront of edit_booking and delete_booking. The pages both loaded fine and once clicked on the edit button this took me to the edit page. I tried the same for the delete page, this worked fine. Then I tested that on the edit page I could change that particular booking's details, changing the time and the date, once confirmed I was then taken back to the my_booking page and the booking had indeed been updated. Again I tested that on the delete page I could delete the chosen booking, once deleted was taken back to the my_booking page where the booking had been removed. 
 
 * The favicon wasn’t loading to the website after going over the code. It was because I had used an incorrect file path in the static folder. Once corrected the favicon was showing. 
 
@@ -129,14 +130,14 @@ I had also forgotten to add django.contrib.sites to my settings.py file.
 # Validator Testing
 * HTML - No errors found, passed on W3C HTML Validator
 * CSS - No errors found, passed on W3C CSS Validator
-* PEP8 Python Validator - The only error that came up were that my line of code was too long. 
+* PEP8 Python Validator - The only error that came up was that my line of code was too long. 
 ![PEP8](static/css/images/pep-screenshot.png)
 
 # Testing
 ## Manual Testing 
 * Through development of the project in GitPod. All buttons take me to the correct place, all font awesome links take me to the correct social media sites. Booking form works correctly and the chosen fields for the edit booking page work correctly. On the live deployed site on Heroku the website works as expected.
-* The book button on the home page takes the user to a page where they can input their chosen data for the booking they want, once they have completed this they click on book now, this will take the user to the thank you page where they can choose to click on the button that will take them to the my booking page or click the logo to go back to the homepage. If they click go back to my booking this will take them to a my booking page with their booking that they have just made. There are two buttons inside this booking one is edit and the other is delete, they now have the ability to edit or delete that chosen booking. If editing they only have a few feilds they can choose as having to retype name and email I found may interfere with user experience so minimalised this by choosing the most in demand for change. This was time, day and how many guests would be attending. Once completed the user can click on confirm changes, this will take them back to the my booking page with the updated changes to that booking. The delete button will take the user to the delete page for that choosen booking, there is a message for the user, are they sure they want to delete their booking. If they are sure they can confirm booking delete and they will be redirected back to the my booking page where their booking has now been deleted and is no longer there, the page will display that there are no bookings yet. Or if they have chananged their mind they can click on the back to home button.  The user was able to book, edit and delete their booking.
-* When clicking on the collapisible nav bar if a user was to click on the menu link this takes them to the menu page. If the user clicks on the link download our menu here a new tab will open with a PDF version of the menu. The menu opened as expected.
+* The book button on the home page takes the user to a page where they can input their chosen data for the booking they want, once they have completed this they click on book now, this will take the user to the thank you page where they can choose to click on the button that will take them to the my booking page or click the logo to go back to the homepage. If they click go back to my booking this will take them to a my booking page with their booking that they have just made. There are two buttons inside this booking one is edit and the other is delete, they now have the ability to edit or delete that chosen booking. If editing they only have a few fields they can choose as having to retype name and email I found may interfere with user experience so minimize this by choosing the most in demand for change. This was time, day and how many guests would be attending. Once completed the user can click on confirm changes, this will take them back to the my booking page with the updated changes to that booking. The delete button will take the user to the delete page for that chosen booking, there is a message for the user, are they sure they want to delete their booking. If they are sure they can confirm booking delete and they will be redirected back to the my booking page where their booking has now been deleted and is no longer there, the page will display that there are no bookings yet. Or if they have changed their mind they can click on the back to home button.  The user was able to book, edit and delete their booking.
+* When clicking on the collapsible navbar if a user was to click on the menu link this takes them to the menu page. If the user clicks on the link to download our menu here a new tab will open with a PDF version of the menu. The menu opened as expected.
 * All social media links open to their designated social media platforms.
 * All buttons work and take the user to the correct pages. 
 * For this test user I created a made up email and name.
@@ -158,18 +159,18 @@ For testing I had to comment out my database code and use the database code prov
 
 
 
-# Technologys Used
+# Technologies Used
 ## Frameworks, Libraries, Programs & Applications Used
 * Django
 * PostgreSQL
 * Bootstrap
 * Cloudinary - I used Cloudinary to store images from this project.
-* Font Awesome - I used Icons from Font Awesome for mmy social media links which made it more realisic site.
+* Font Awesome - I used Icons from Font Awesome for my social media links which made it a more realistic site.
 * Figma - I used Figma in the planning stage to create my sitemap, from this I created my website like I had designed.
 * GitHub - My project was stored on Github.
 * GitPod - Gitpod was used for writing my code and when I pushed commits from Gitpod they were uploaded to Github where my project was stored.
 * Heroku - Where the project was deployed to.
-* Google Development Tool - Where I checked the responsiveness of the website and edit any code without the risk of making it a permanent change.
+* Google Development Tool - Where I checked the responsiveness of the website and edited any code without the risk of making it a permanent change.
 * Elephantsql - I used Elephantsql for my database.
 
 ## Languages
@@ -180,7 +181,7 @@ For testing I had to comment out my database code and use the database code prov
 
 
 # Accessibility
-* Using Google Development tools, I tested the accessability of the site via the lighthouse option. My website scored 
+* Using Google Development tools, I tested the accessibility of the site via the lighthouse option. My website scored 
 ![LightHouse](static/css/images/lighthouse-score.png)
 
 # Deployment
@@ -201,7 +202,7 @@ For testing I had to comment out my database code and use the database code prov
 ## Content 
 * GeekforGeek-[GeekforGeek](https://www.geeksforgeeks.org/updateview-class-based-views-django/). Code content inspired and altered for the use of creating my class based views.
 * DevGenuis-[DevGenuis](https://blog.devgenius.io/django-tutorial-on-how-to-create-a-booking-system-for-a-health-clinic-9b1920fc2b78).
-Code content inspired and altered for use of creating my model so i can use date and times choices.
+Code content inspired and altered for use in creating my model so I can use date and time choices.
 * Stack Overflow[Stack Overflow](https://stackoverflow.com/questions/71812428/django-how-can-i-create-a-user-view-that-allows-a-user-to-amend-or-delete-their). Stack Overflow posts that helped me understand how to use views for my project, with some code altered for my project.
-* W3schools-[W3Schools](https://www.w3schools.com/bootstrap4/bootstrap_navbar.asp). For helping me to understand how to use collapsible navagation and how it is implemente in code.
-* Code Institue Walkthough Projects that also contributed to the creation of my project: I Think Therefore I Blog Walkthrough, Hello Django Walkthrough and Bootstrap Resume Walkthrough for Downloading PDF.
+* W3schools-[W3Schools](https://www.w3schools.com/bootstrap4/bootstrap_navbar.asp). For helping me to understand how to use collapsible navigation and how it is implemented in code.
+* Code Institute Walkthrough Projects that also contributed to the creation of my project: I Think Therefore I Blog Walkthrough, Hello Django Walkthrough and Bootstrap Resume Walkthrough for Downloading PDF.
